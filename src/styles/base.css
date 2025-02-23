@@ -1,0 +1,212 @@
+/* Reset, variables, fonts */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: var(--bg-main);
+  font-family: var(--font-main);
+  color: var(--text-dark);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Downloads */
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('../assets/fonts/PPEditorialOld-UltralightItalic.woff2')
+      format('woff2'),
+    url('../assets/fonts/PPEditorialOld-UltralightItalic.woff') format('woff');
+}
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --bg-main: #fff8ed;
+  --bg-dark: #282828;
+  --bg-light: #ececec;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --cta-color: #3183fc;
+  --transparent: transparent;
+
+  /* Typography */
+  --font-main: 'Poppins', sans-serif;
+  --font-decorative: 'PP Editorial Old', serif;
+
+  /* Perfect Four Typography Scale */
+  --font-size-xxl: 5.61rem;
+  --line-height-xxl: 5.61rem;
+
+  --font-size-xl: 4.209rem;
+  --line-height-xl: 4.5rem;
+
+  --font-size-lg: 2.369rem;
+  --line-height-lg: 3rem;
+
+  --font-size-md: 1.777rem;
+  --line-height-md: 2rem;
+
+  --font-size-sm: 1.333rem;
+  --line-height-sm: 1.5rem;
+
+  --font-size-base: 1rem;
+  --line-height-base: 1.5rem;
+
+  --font-size-xs: 0.75rem;
+  --line-height-xs: 1rem;
+
+  --font-size-xxs: 0.563rem;
+  --line-height-xxs: 1rem;
+
+  /* Border Radius */
+  --radius-xl: 80px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+
+  /* Spacing */
+  --gap-section: 160px;
+  --gap-inner: 80px;
+
+  /* Grid System */
+  --grid-columns: 12;
+  --grid-margin: 80px;
+  --grid-gutter: 16px;
+  --grid-base: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}

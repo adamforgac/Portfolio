@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal website design portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "liteServer": {
+    "baseDir": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamforgac/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "Adam Forgáč",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamforgac/Portfolio/issues"
+  },
+  "homepage": "https://github.com/adamforgac/Portfolio#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

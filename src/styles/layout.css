@@ -1,0 +1,42 @@
+/* Grid, flexbox, spacing */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.regular-container {
+  width: calc(100% - 160px); /* 80px margin on both sides */
+  max-width: 1280px;
+}
+
+.full-width-container {
+  width: 100%;
+}
+
+.outer-section {
+  margin-top: 160px;
+}
+
+.regular-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  column-gap: var(--grid-gutter);
+}
+
+/* inner boxes */
+
+.button-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.button-box {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Forgáč</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+
+    <script defer src="scripts/loadComponent.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="regular-container">
+        <nav>
+          <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+              >
+                <path
+                  d="M7.46528 0C7.75293 0 7.98611 0.233185 7.98611 0.520833V1.21528C7.98611 1.50293 7.75293 1.73611 7.46528 1.73611C7.17763 1.73611 6.94444 1.50293 6.94444 1.21528V0.520833C6.94444 0.233185 7.17763 0 7.46528 0Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.47222 7.46528C3.47222 5.25997 5.25997 3.47222 7.46528 3.47222C9.67058 3.47222 11.4583 5.25997 11.4583 7.46528C11.4583 9.67058 9.67058 11.4583 7.46528 11.4583C5.25997 11.4583 3.47222 9.67058 3.47222 7.46528ZM7.46528 4.51389C5.83527 4.51389 4.51389 5.83527 4.51389 7.46528C4.51389 9.09528 5.83527 10.4167 7.46528 10.4167C9.09528 10.4167 10.4167 9.09528 10.4167 7.46528C10.4167 5.83527 9.09528 4.51389 7.46528 4.51389Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M2.92311 2.18654C2.71971 1.98315 2.38994 1.98315 2.18654 2.18654C1.98314 2.38994 1.98314 2.71972 2.18654 2.92311L2.67759 3.41416C2.88098 3.61756 3.21076 3.61756 3.41416 3.41416C3.61755 3.21076 3.61755 2.88099 3.41416 2.67759L2.92311 2.18654Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M14.9306 7.46528C14.9306 7.75293 14.6974 7.98611 14.4097 7.98611H13.7153C13.4276 7.98611 13.1944 7.75293 13.1944 7.46528C13.1944 7.17763 13.4276 6.94444 13.7153 6.94444H14.4097C14.6974 6.94444 14.9306 7.17763 14.9306 7.46528Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M12.744 2.92311C12.9474 2.71971 12.9474 2.38994 12.744 2.18654C12.5406 1.98314 12.2108 1.98314 12.0074 2.18654L11.5164 2.67759C11.313 2.88098 11.313 3.21076 11.5164 3.41416C11.7198 3.61755 12.0496 3.61755 12.253 3.41416L12.744 2.92311Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M7.46528 13.1944C7.75293 13.1944 7.98611 13.4276 7.98611 13.7153V14.4097C7.98611 14.6974 7.75293 14.9306 7.46528 14.9306C7.17763 14.9306 6.94444 14.6974 6.94444 14.4097V13.7153C6.94444 13.4276 7.17763 13.1944 7.46528 13.1944Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M12.253 11.5164C12.0496 11.313 11.7198 11.313 11.5164 11.5164C11.313 11.7198 11.313 12.0496 11.5164 12.253L12.0075 12.744C12.2109 12.9474 12.5407 12.9474 12.7441 12.744C12.9475 12.5406 12.9475 12.2108 12.7441 12.0075L12.253 11.5164Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M1.73611 7.46528C1.73611 7.75293 1.50293 7.98611 1.21528 7.98611H0.520833C0.233185 7.98611 0 7.75293 0 7.46528C0 7.17763 0.233185 6.94444 0.520833 6.94444H1.21528C1.50293 6.94444 1.73611 7.17763 1.73611 7.46528Z"
+                  fill="#E9EAF0"
+                />
+                <path
+                  d="M3.41411 12.253C3.61751 12.0496 3.61751 11.7198 3.41411 11.5164C3.21071 11.313 2.88094 11.313 2.67754 11.5164L2.18649 12.0074C1.98309 12.2108 1.98309 12.5406 2.18649 12.744C2.38989 12.9474 2.71966 12.9474 2.92306 12.744L3.41411 12.253Z"
+                  fill="#E9EAF0"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 17 17"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.38116 0.692092C7.88417 1.15004 7.76333 1.85084 7.5312 2.36694L7.53078 2.36788C7.18557 3.13187 6.99615 3.96846 7.00318 4.85285L7.00319 4.85505C7.0172 8.13109 9.836 10.9581 13.3269 11.0963L13.3274 11.0964C13.8417 11.1171 14.3333 11.0826 14.8105 10.9999C15.1242 10.9446 15.4294 10.9352 15.7028 10.997C15.9798 11.0595 16.2628 11.2062 16.4407 11.4881C16.6198 11.7719 16.6287 12.0915 16.5606 12.3687C16.494 12.6403 16.3479 12.905 16.1586 13.1533C14.5066 15.3416 11.7632 16.72 8.70901 16.5917L8.70866 16.5917C4.37764 16.4073 0.725409 13.0486 0.422654 8.86055C0.146127 5.1485 2.42201 1.93069 5.70399 0.590594C6.22996 0.374894 6.9111 0.264146 7.38116 0.692092ZM6.52627 1.60137C6.4471 1.60723 6.32509 1.6328 6.15867 1.70112L6.15762 1.70155C3.30647 2.86573 1.38513 5.63105 1.61938 8.772L1.61949 8.77341C1.87467 12.3079 4.99042 15.2321 8.75935 15.3928C11.4197 15.5045 13.7869 14.3041 15.2017 12.4292L15.2036 12.4266C15.2906 12.3126 15.3411 12.2224 15.3691 12.1573C15.292 12.1508 15.1771 12.1537 15.0184 12.1818L15.0165 12.1821C14.4565 12.2792 13.8798 12.3196 13.2795 12.2954C9.19705 12.1337 5.82079 8.82794 5.80321 4.86128C5.79491 3.79675 6.02359 2.78935 6.43703 1.87419C6.49179 1.75237 6.51636 1.66218 6.52627 1.60137ZM6.61207 1.60459C6.61205 1.60462 6.61144 1.60446 6.61031 1.60405Z"
+                  fill="#E9EAF0"
+                />
+              </svg>
+            </span>
+          </label>
+
+          <ul>
+            <li>
+              <a href="#">CZ</a>
+            </li>
+
+            <li>
+              <a class="active-language" href="#">EN</a>
+            </li>
+
+            <li>
+              <a href="#">DE</a>
+            </li>
+          </ul>
+
+          <div class="hamburger-menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              viewBox="0 0 42 42"
+              fill="none"
+            >
+              <circle cx="21" cy="21" r="21" fill="#282828" />
+              <path
+                d="M15.72 13H33M8 21L33 21M15.72 29L33 29"
+                stroke="white"
+                stroke-width="2.3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </nav>
+      </header>
+
+      <section
+        class="regular-container regular-grid outer-section hero-section"
+      >
+        <div class="button-text-box">
+          <span class="heading-style-2">Hi, I am Adam.</span>
+
+          <h1 class="heading-style-1">
+            Web developer and <span class="decorative-text">designer</span>
+          </h1>
+
+          <p class="primary-paragraph">
+            Junior 19 year old web developer and designer based in Zlin, Czech
+            Republic. Creating modern, responsive websites with creative design
+            solutions.
+          </p>
+
+          <div class="button-box">
+            <button class="cta-one">Start the project</button>
+            <button class="cta-two">Contact me</button>
+          </div>
+        </div>
+
+        <figure>
+          <picture>
+            <!-- <source
+              media="(max-width: 400px)"
+              srcset="images/v4-uzka.jpg"
+              sizes="100vw"
+            />
+
+            <source
+              media="(max-width: 3000px)"
+              srcset="images/v4-velka.jpg 5474w, images/v4-mala.jpg 640w"
+              sizes="100vw"
+            /> -->
+            <img src="assets/images/desktop-1.webp" alt="Adam Forgáč" />
+          </picture>
+
+          <figcaption>
+            <!-- Fotografie pořízena fotografem Martinem Malinou -->
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        class="full-width-container regular-grid outer-section image-slider"
+      >
+        <div class="strip-one"></div>
+
+        <div class="strip-two"></div>
+      </section>
+    </div>
+  </body>
+</html>
