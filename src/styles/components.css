@@ -1,6 +1,6 @@
 /* Buttons, cards, forms */
 
-/* headings */
+/* Headings */
 
 .heading-style-1 {
   font-size: var(--font-size-xl);
@@ -57,7 +57,7 @@
   border: 1px solid var(--text-dark);
 }
 
-/* header */
+/* Header */
 
 header {
   margin-top: 32px;
@@ -76,7 +76,7 @@ nav ul {
   gap: 32px;
 }
 
-/* theme switch */
+/* Theme switch */
 
 .theme-switch {
   position: relative;
@@ -132,7 +132,7 @@ input:checked + .slider::before {
   transform: translateX(30px);
 }
 
-/* languages */
+/* Languages */
 
 nav ul li a {
   color: var(--text-dark);
@@ -142,7 +142,7 @@ nav ul li a {
   text-decoration: underline;
 }
 
-/* hamburger menu */
+/* Hamburger menu */
 
 .hamburger-menu {
   width: 64px;
@@ -151,7 +151,7 @@ nav ul li a {
   align-items: center;
 }
 
-/* hero section */
+/* Hero section */
 
 .hero-section {
   align-items: center;
@@ -169,4 +169,54 @@ nav ul li a {
   border-radius: var(--radius-lg);
 }
 
-/* image slider section */
+/* Image slider section */
+
+.image-slider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.image-slider > div {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+
+.strip-two, .strip-one {
+  justify-content: center;
+}
+
+.image-slider img {
+  width: auto;
+  height: 100%;
+  border-radius: var(--radius-lg);
+}
+
+/* Work section */
+
+.work-section {
+  gap: 80px;
+}
+
+.work-section .regular-textbox > * {
+  text-align: center;
+}
+
+.all-work-cards {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 32px;
+  grid-column: 1 / -1;
+}
+
+.work-card {
+  background: var(--bg-light);
+  padding: 16px 16px 16px 40px;
+  border-radius: var(--radius-lg);
+}
+
