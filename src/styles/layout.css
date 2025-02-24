@@ -35,10 +35,6 @@
   align-items: center;
 }
 
-.work-cards {
-  grid-column: 1 / -1;
-}
-
 .button-text-box {
   display: flex;
   flex-direction: column;
@@ -53,4 +49,8 @@
 
 .width-keeper {
   max-width: 632px;
+}
+
+.width-keeper-2 {
+  max-width: 400px;
 }
