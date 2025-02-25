@@ -6,6 +6,8 @@
   flex-direction: column;
 }
 
+/* Udává šířku */
+
 .regular-container {
   width: calc(100% - 160px); /* 80px margin on both sides */
   max-width: 1280px;
@@ -13,16 +15,29 @@
 
 .full-width-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Udává mezery mezi sekcemi */
 
 .outer-section {
   margin-top: 160px;
 }
 
+/* Udává běžný grid sekcí */
+
 .regular-grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
   column-gap: var(--grid-gutter);
+  grid-auto-rows: auto;
+}
+
+.regular-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 /* inner boxes */
@@ -30,12 +45,19 @@
 .regular-textbox {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
   grid-column: 1 / -1;
   align-items: center;
 }
 
-.button-text-box {
+.width-textbox {
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-textbox {
   display: flex;
   flex-direction: column;
   gap: 24px;

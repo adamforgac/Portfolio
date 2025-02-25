@@ -191,10 +191,14 @@ table {
   --radius-xl: 80px;
   --radius-lg: 24px;
   --radius-md: 16px;
+  --radius-sm: 8px;
 
   /* Spacing */
-  --gap-section: 160px;
-  --gap-inner: 80px;
+  --inner-gap: 80px;
+  --gap-lg: 32px;
+  --gap-md: 16px;
+  --gap-sm: 8px;
+  --gap-xs: 4px;
 
   /* Grid System */
   --grid-columns: 12;
