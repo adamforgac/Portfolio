@@ -10,19 +10,24 @@
   font-weight: 200;
 }
 
-.heading-style-2 {
+.heading-style-3 {
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
   font-weight: 300;
 }
 
-.heading-style-3 {
+.heading-style-2 {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-lg);
   font-weight: 300;
 }
 
 .heading-style-4 {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.heading-style-5 {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
@@ -220,8 +225,7 @@ nav ul li a {
 /* Work section */
 /* Work section */
 
-.work-section,
-.workflow-section {
+.work-section {
   row-gap: var(--inner-gap);
 }
 
@@ -299,6 +303,7 @@ nav ul li a {
 /* My workflow */
 
 .workflow-section {
+  row-gap: var(--inner-gap);
 }
 
 .workflow-steps {
@@ -336,7 +341,7 @@ nav ul li a {
   padding: 80px 0;
   border-radius: var(--radius-lg);
   position: relative;
-  row-gap: 104px;
+  row-gap: var(--inner-gap);
 }
 
 .contact-me * {
@@ -385,22 +390,22 @@ nav ul li a {
   /* transform: translate(-50%, -50%); */
 }
 
-.piece-1 {
-  left: 10%;
+.click-banner {
+  left: 5%;
   top: 0%;
 }
 
-.piece-2 {
+.click-banner:nth-child(2) {
   left: 30%;
   top: 60%;
 }
 
-.piece-3 {
+.click-banner:nth-child(3) {
   left: 60%;
   top: 15%;
 }
 
-.piece-4 {
+.click-banner:last-child {
   left: 85%;
   top: 65%;
 }
@@ -411,6 +416,117 @@ nav ul li a {
 
 /* Why me section */
 
+.why-me {
+  row-gap: var(--inner-gap);
+}
+
+.why-me .dividing-line-vertical {
+  height: 160px;
+}
+
 .why-me .regular-textbox > * {
   text-align: center;
+}
+
+.tick-one,
+.tick-two {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.ticks {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+
+.why-me .vertical-icon-box svg {
+  height: 48px;
+}
+
+.why-me .horizontal-icon-box svg {
+  height: 48px;
+}
+
+.double-box {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.double-box > div {
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 16px 16px 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.double-box p {
+  margin-top: 32px;
+}
+
+.why-me .lottie-animation {
+  border-radius: var(--radius-md);
+}
+
+.double-box .horizontal-icon-box,
+.double-box p {
+  padding: 0 8px;
+}
+
+.earth-box {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.earth-box h3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.earth-box h3 .decorative-text {
+  margin-left: auto;
+}
+
+.earth-box > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-column: 1 / 8;
+}
+
+.earth-box > picture {
+  grid-column: 9 / 13;
+}
+
+.earth-box img {
+  width: 500px;
+}
+
+.triple-box {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.triple-box h3 {
+  text-align: center;
+  padding: 16px 24px 0 24px;
+}
+
+.triple-box > div {
+  border-radius: var(--radius-lg);
+  background: var(--bg-light);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

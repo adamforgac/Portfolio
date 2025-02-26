@@ -76,3 +76,18 @@
 .width-keeper-2 {
   max-width: 400px;
 }
+
+.vertical-icon-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
