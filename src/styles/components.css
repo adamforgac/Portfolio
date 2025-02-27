@@ -595,6 +595,82 @@ nav ul li a {
 .review-card img {
   width: 72px;
   height: 96px;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: var(--radius-md);
+}
+
+/* Final CTA */
+/* Final CTA */
+/* Final CTA */
+
+.final-cta {
+  background: var(--bg-dark);
+  padding: 80px 0;
+  border-radius: var(--radius-lg);
+  position: relative;
+  row-gap: var(--inner-gap);
+}
+
+.final-cta * {
+  color: var(--text-light);
+  text-align: center;
+}
+
+.icon-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+  /* lepší podpora pro prohlížeče */
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px;
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+}
+
+.icon-banner svg {
+  height: 24px;
+  width: 24px;
+}
+
+.final-cta .icon-banner {
+  left: 10%;
+  top: 20%;
+}
+
+.final-cta .icon-banner:nth-child(2) {
+  left: 30%;
+  top: 80%;
+}
+
+.final-cta .icon-banner:nth-child(3) {
+  left: 80%;
+  top: 25%;
+}
+
+.final-cta .icon-banner:nth-child(4) {
+  left: 73%;
+  top: 50%;
+}
+
+.final-cta .icon-banner:nth-child(5) {
+  left: 20%;
+  top: 45%;
+}
+
+.final-cta .icon-banner:nth-child(6) {
+  left: 90%;
+  top: 75%;
+}
+
+.final-cta .icon-banner:nth-child(7) {
+  left: 60%;
+  top: 66%;
+}
+
+.final-cta .icon-banner:nth-child(8) {
+  left: 5%;
+  top: 70%;
 }
