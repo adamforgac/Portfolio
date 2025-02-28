@@ -11,8 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <link rel="stylesheet" href="styles/layout.css" />
 
@@ -134,7 +133,8 @@
           <span class="heading-style-3">Hi, I am Adam.</span>
 
           <h1 class="heading-style-1">
-            Web developer and <span class="decorative-text">designer</span>
+            Web developer and
+            <span class="decorative-text decorative-animation">designer</span>
           </h1>
 
           <p class="primary-paragraph">
@@ -301,7 +301,8 @@
       >
         <div class="regular-textbox">
           <h2 class="heading-style-1">
-            A glimpse into my<br /><span class="decorative-text"
+            A glimpse into my<br /><span
+              class="decorative-text decorative-animation"
               >recent work</span
             >
           </h2>
@@ -693,26 +694,41 @@
         </div>
 
         <div class="no-gravity-zone">
-          <div class="text-slider">
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
-            <span class="dividing-line-horizontal"></span>
+          <div class="word-slider slider-shadow">
+            <div class="slider-wrapper">
+              <h3 class="decorative-text">Contact&nbsp;me</h3>
+              <span class="dividing-line-horizontal"></span>
 
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
-            <span class="dividing-line-horizontal"></span>
+              <h3 class="decorative-text">Contact&nbsp;me</h3>
+              <span class="dividing-line-horizontal"></span>
 
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
-            <span class="dividing-line-horizontal"></span>
+              <h3 class="decorative-text">Contact&nbsp;me</h3>
+              <span class="dividing-line-horizontal"></span>
 
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
-            <span class="dividing-line-horizontal"></span>
+              <h3 class="decorative-text">Contact&nbsp;me</h3>
+              <span class="dividing-line-horizontal"></span>
 
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
-            <span class="dividing-line-horizontal"></span>
+              <!-- Duplicate content for seamless looping -->
+              <h3 class="decorative-text" aria-hidden="true">
+                Contact&nbsp;me
+              </h3>
+              <span aria-hidden="true" class="dividing-line-horizontal"></span>
 
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
-            <span class="dividing-line-horizontal"></span>
+              <h3 aria-hidden="true" class="decorative-text">
+                Contact&nbsp;me
+              </h3>
+              <span aria-hidden="true" class="dividing-line-horizontal"></span>
 
-            <h3 class="decorative-text">Contact&nbsp;me</h3>
+              <h3 aria-hidden="true" class="decorative-text">
+                Contact&nbsp;me
+              </h3>
+              <span aria-hidden="true" class="dividing-line-horizontal"></span>
+
+              <h3 aria-hidden="true" class="decorative-text">
+                Contact&nbsp;me
+              </h3>
+              <span aria-hidden="true" class="dividing-line-horizontal"></span>
+            </div>
           </div>
 
           <div class="click-banner">
@@ -788,7 +804,8 @@
       <section class="regular-container regular-grid outer-section why-me">
         <div class="regular-textbox">
           <h2 class="heading-style-1">
-            Why should you choose me<br /><span class="decorative-text"
+            Why should you choose me<br /><span
+              class="decorative-text decorative-animation"
               >for your next project</span
             >
           </h2>
@@ -925,7 +942,9 @@
           <div>
             <h3 class="heading-style-1">
               Designing Beyond
-              <span class="decorative-text"> the borders </span>
+              <span class="decorative-text decorative-animation">
+                the borders
+              </span>
             </h3>
 
             <p class="primary-paragraph width-keeper">
@@ -935,8 +954,8 @@
             </p>
           </div>
 
-          <picture>
-            <img src="assets/images/advantages/earth.webp" alt="" />
+          <picture class="planet-container">
+            <img id="earth" src="assets/images/advantages/earth.webp" alt="" />
           </picture>
         </div>
 
@@ -982,7 +1001,9 @@
       <section class="regular-container regular-grid outer-section reviews">
         <h2 class="heading-style-1">
           What my clients and co-workers
-          <span class="decorative-text"> say about me </span>
+          <span class="decorative-text decorative-animation">
+            say about me
+          </span>
         </h2>
 
         <div class="review-card">
@@ -1010,7 +1031,7 @@
         <div class="review-card">
           <div class="review-header">
             <img
-              src="assets/images/clients/jitka-smaller.webp"
+              src="assets/images/clients/jj-smaller.webp"
               alt="Koučka a HR expertka Jitka Žalůdková"
             />
 
@@ -1032,7 +1053,7 @@
         <div class="review-card">
           <div class="review-header">
             <img
-              src="assets/images/clients/jitka-smaller.webp"
+              src="assets/images/clients/mozisek-smaller.webp"
               alt="Koučka a HR expertka Jitka Žalůdková"
             />
 
@@ -1057,182 +1078,193 @@
       >
         <div class="heading-textbox">
           <h2 class="heading-style-1">
-            Lift your brand to<br /><span class="decorative-text"
+            Let's lift your website to<br /><span
+              class="decorative-text decorative-animation"
               >digital heights</span
             >
           </h2>
 
-          <button class="cta-one">Let's start today</button>
+          <button class="cta-one">Start today</button>
         </div>
 
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
+        <div class="regular-container icon-space">
+          <div class="icon-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
+                fill="white"
+              />
+            </svg>
+          </div>
 
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
+          <div class="icon-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
+                fill="white"
+              />
+            </svg>
+          </div>
 
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
+          <div class="icon-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
+                fill="white"
+              />
+            </svg>
+          </div>
 
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
+          <div class="icon-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
+                fill="white"
+              />
+            </svg>
+          </div>
 
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
+          <div class="icon-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
+                fill="white"
+              />
+            </svg>
+          </div>
 
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-
-        <div class="icon-banner">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22 30"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
-              fill="white"
-            />
-          </svg>
+          <div class="icon-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 22 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4697 0.469654C10.7626 0.176781 11.2375 0.176782 11.5304 0.469656L21.5303 10.4691C21.8232 10.762 21.8232 11.2369 21.5303 11.5298C21.2375 11.8227 20.7626 11.8227 20.4697 11.5298L11 2.06063L1.53031 11.5298C1.23741 11.8227 0.762539 11.8227 0.469654 11.5298C0.17677 11.2369 0.176784 10.762 0.469686 10.4691L10.4697 0.469654Z"
+                fill="white"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11 0.531251C11.4142 0.531251 11.75 0.867037 11.75 1.28125V29.0062C11.75 29.4204 11.4142 29.7562 11 29.7562C10.5858 29.7562 10.25 29.4204 10.25 29.0062V1.28125C10.25 0.867037 10.5858 0.531251 11 0.531251Z"
+                fill="white"
+              />
+            </svg>
+          </div>
         </div>
       </section>
+
+      <footer class="full-width-container regular-flex">
+        <div class="footer-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1920 396"
+            fill="none"
+          >
+            <path
+              d="M270.949 22.2056V81.9492H172.518V396H98.4308V81.9492H0V22.2056H270.949Z"
+              fill="black"
+            />
+            <path
+              d="M490.116 94.1095C512.342 94.1095 532.099 99.044 549.386 108.913C566.673 118.43 580.079 132.705 589.605 151.738C599.483 170.419 604.422 192.977 604.422 219.413V396H530.335V229.458C530.335 206.195 524.514 188.395 512.871 176.059C501.229 163.37 485.353 157.025 465.243 157.025C444.781 157.025 428.552 163.37 416.557 176.059C404.915 188.395 399.094 206.195 399.094 229.458V396H325.006V0H399.094V134.82C408.619 122.131 421.32 112.262 437.196 105.212C453.072 97.8104 470.712 94.1095 490.116 94.1095Z"
+              fill="black"
+            />
+            <path
+              d="M655.825 243.733C655.825 214.125 661.646 187.866 673.289 164.956C685.284 142.045 701.336 124.422 721.445 112.085C741.908 99.749 764.663 93.5808 789.712 93.5808C811.586 93.5808 830.637 97.9866 846.865 106.798C863.447 115.61 876.677 126.713 886.555 140.107V98.3391H961.172V396H886.555V348.417C877.03 362.163 863.8 373.618 846.865 382.782C830.284 391.594 811.056 396 789.183 396C764.487 396 741.908 389.656 721.445 376.967C701.336 364.278 685.284 346.478 673.289 323.567C661.646 300.304 655.825 273.693 655.825 243.733ZM886.555 244.79C886.555 226.814 883.027 211.482 875.971 198.793C868.915 185.752 859.39 175.882 847.395 169.186C835.4 162.136 822.522 158.611 808.763 158.611C795.004 158.611 782.303 161.96 770.661 168.657C759.019 175.354 749.493 185.223 742.084 198.264C735.028 210.953 731.5 226.109 731.5 243.733C731.5 261.356 735.028 276.865 742.084 290.259C749.493 303.3 759.019 313.346 770.661 320.395C782.656 327.445 795.357 330.969 808.763 330.969C822.522 330.969 835.4 327.621 847.395 320.924C859.39 313.874 868.915 304.005 875.971 291.316C883.027 278.275 886.555 262.766 886.555 244.79Z"
+              fill="black"
+            />
+            <path
+              d="M1196 94.1095C1230.92 94.1095 1259.15 105.212 1280.67 127.418C1302.19 149.271 1312.95 179.936 1312.95 219.413V396H1238.86V229.458C1238.86 206.195 1233.04 188.395 1221.4 176.059C1209.75 163.37 1193.88 157.025 1173.77 157.025C1153.31 157.025 1137.08 163.37 1125.08 176.059C1113.44 188.395 1107.62 206.195 1107.62 229.458V396H1033.53V98.3391H1107.62V134.82C1117.5 122.131 1130.02 112.262 1145.19 105.212C1160.72 97.8104 1177.65 94.1095 1196 94.1095Z"
+              fill="black"
+            />
+            <path
+              d="M1556.98 396L1457.49 266.467V396H1383.4V0H1457.49V222.585L1555.92 98.3391H1652.23L1523.11 245.319L1653.29 396H1556.98Z"
+              fill="black"
+            />
+            <path
+              d="M1804.64 396C1780.64 396 1759.12 391.77 1740.07 383.311C1721.02 374.499 1705.85 362.692 1694.56 347.888C1683.62 333.084 1677.63 316.694 1676.57 298.718H1751.19C1752.6 309.997 1758.07 319.338 1767.59 326.74C1777.47 334.142 1789.64 337.842 1804.11 337.842C1818.22 337.842 1829.15 335.023 1836.92 329.383C1845.03 323.744 1849.09 316.518 1849.09 307.706C1849.09 298.19 1844.15 291.14 1834.27 286.558C1824.74 281.623 1809.4 276.336 1788.23 270.697C1766.36 265.41 1748.36 259.947 1734.25 254.307C1720.49 248.668 1708.5 240.032 1698.27 228.401C1688.39 216.769 1683.45 201.084 1683.45 181.346C1683.45 165.132 1688.04 150.328 1697.21 136.935C1706.73 123.541 1720.14 112.967 1737.43 105.212C1755.07 97.4579 1775.71 93.5808 1799.34 93.5808C1834.27 93.5808 1862.14 102.393 1882.96 120.016C1903.77 137.287 1915.24 160.726 1917.35 190.334H1846.44C1845.38 178.702 1840.44 169.538 1831.62 162.841C1823.16 155.792 1811.69 152.267 1797.23 152.267C1783.82 152.267 1773.41 154.734 1766 159.669C1758.95 164.603 1755.42 171.477 1755.42 180.288C1755.42 190.158 1760.36 197.736 1770.24 203.023C1780.12 207.957 1795.46 213.068 1816.28 218.355C1837.45 223.642 1854.91 229.105 1868.67 234.745C1882.43 240.385 1894.25 249.196 1904.12 261.18C1914.36 272.812 1919.65 288.32 1920 307.706C1920 324.625 1915.24 339.781 1905.71 353.175C1896.54 366.569 1883.13 377.143 1865.49 384.897C1848.21 392.299 1827.92 396 1804.64 396Z"
+              fill="black"
+            />
+          </svg>
+
+          <div class="cloud-space">
+            <img src="assets/images/3d-cloud.webp" alt="" />
+
+            <img src="assets/images/3d-cloud.webp" alt="" />
+
+            <img src="assets/images/3d-cloud.webp" alt="" />
+          </div>
+
+          <div class="full-width-line"></div>
+
+          <div class="info-panel">
+            <span>Web by me &copy; </span>
+            <span> web@adamforgac.cz </span>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
