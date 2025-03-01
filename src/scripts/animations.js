@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             });
           },
-          { threshold: 0.3 }
+          { threshold: 1 }
         );
 
         observer.observe(element);
