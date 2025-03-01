@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1230px) {
+  /* Hero section */
+  /* Hero section */
+  /* Hero section */
+
   .hero-section > div {
     grid-column: 1 / 8;
   }
@@ -7,12 +11,44 @@
     grid-column: 8 / 13;
   }
 
+  /* Image slider */
+  /* Image slider */
+  /* Image slider */
+
   .image-slider > div {
     height: 150px;
   }
 
+  /* Work section */
+  /* Work section */
+  /* Work section */
+
   .paragraph-tags-box {
     gap: 24px;
+  }
+
+  /* Workflow */
+
+  .workflow-section .single-step h3 {
+    max-width: 170px;
+  }
+
+  /* Why me */
+  /* Why me */
+  /* Why me */
+
+  .why-me .triple-box > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .why-me .triple-box {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .why-me .triple-box > div:last-child .lottie-animation {
+    max-height: 140px;
+    height: 100%;
   }
 }
 
@@ -55,7 +91,7 @@
   }
 
   .outer-section {
-    margin-top: 104px;
+    margin-top: 144px;
   }
 
   .decorative-animation {
@@ -84,11 +120,6 @@
   /* width-keeper
 
   width-keeper-2 */
-
-  .horizontal-icon-box {
-    display: none;
-    grid-template-columns: 1fr;
-  }
 
   .cta-one {
     padding: 10px 20px;
@@ -140,25 +171,114 @@
     height: 350px;
   }
 
-  /* My workflow */
-  /* My workflow */
-  /* My workflow */
+  /* Contact me */
+  /* Contact me */
+  /* Contact me */
 
-  .workflow-steps {
-    grid-template-columns: 1fr 1px 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 64px;
+  .click-banner:last-child {
+    left: 73%;
   }
 
-  .workflow-section .dividing-line-vertical:nth-of-type(2) {
-    grid-column: 2 / 3;
+  .click-banner:nth-child(3) {
+    left: 55%;
+    top: 0;
+  }
+
+  /* Why me */
+  /* Why me */
+  /* Why me */
+
+  .why-me .vertical-icon-box svg {
+    height: 40px;
+  }
+
+  .why-me .double-box > div {
+    padding: 8px;
+  }
+
+  .double-box > div {
+    border-radius: var(--radius-lg);
+  }
+
+  .why-me .double-box > div .horizontal-icon-box {
+    padding: 16px 16px 0 16px;
+  }
+
+  .why-me .double-box p {
+    margin-top: auto;
+  }
+
+  .why-me .double-box > div p {
+    padding: 40px 16px 0 16px;
+  }
+
+  .earth-box > div {
+    grid-column: 1 / 6;
+  }
+
+  .earth-box > picture {
+    grid-column: 6 / 9;
+  }
+
+  .earth-box p {
+    max-width: 500px;
+  }
+
+  .earth-box h3 .decorative-text {
+    margin-left: 0;
+  }
+
+  /* REVIEWS */
+  /* REVIEWS */
+  /* REVIEWS */
+
+  .reviews h2 {
     grid-row: 1 / 2;
+    grid-column: 1 / 5;
   }
 
-  .workflow-section .dividing-line-vertical:nth-child(2),
-  .workflow-section .dividing-line-vertical:nth-child(1) {
-    display: none;
+  .reviews h2 .decorative-text {
+    margin-left: auto;
   }
+
+  .reviews .review-card {
+    grid-row: 1 / 2;
+    grid-column: 6 / -1;
+  }
+
+  .reviews .review-card:nth-child(2) {
+    grid-row: 2 / 3;
+    transform: translateY(-88px);
+    grid-column: 1 / 4;
+  }
+
+  .reviews .review-card:nth-child(3) {
+    grid-row: 2 / 3;
+    grid-column: 5 / 8;
+    margin-top: 68px;
+  }
+
+  /* Final cta */
+  /* Final cta */
+  /* Final cta */
+
+  .final-cta .icon-banner:nth-child(5) {
+    left: 13%;
+    top: 85%;
+  }
+
+  .final-cta .icon-banner:nth-child(1) {
+    left: 1%;
+    top: 40%;
+  }
+
+  .final-cta .icon-banner:nth-child(6) {
+    left: 90%;
+    top: 85%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
 }
 
 @media only screen and (max-width: 900px) {
@@ -169,6 +289,20 @@
   .work-card {
     padding: 0;
     gap: 32px;
+  }
+
+  .work-card,
+  .work-image {
+    border-radius: var(--font-size-lg);
+  }
+
+  .horizontal-icon-box svg {
+    display: none;
+    grid-template-columns: 1fr;
+  }
+
+  .horizontal-icon-box {
+    grid-template-columns: 1fr;
   }
 
   .work-text {
@@ -193,6 +327,38 @@
     transform: translate(-50%, -50%);
     height: 110%;
   }
+
+  /* My workflow */
+  /* My workflow */
+  /* My workflow */
+
+  .workflow-steps {
+    grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+    column-gap: 16px;
+    align-items: center;
+  }
+
+  .workflow-section .dividing-line-vertical {
+    height: 80px;
+  }
+
+  .single-step {
+    row-gap: 24px;
+  }
+
+  /* WHY ME */
+
+  .ticks {
+    gap: 32px;
+  }
+}
+
+@media only screen and (max-width: 967px) {
+  /* Why me */
+
+  .why-me .double-box > div h3 {
+    max-width: 293px;
+  }
 }
 
 @media only screen and (max-width: 880px) {
@@ -207,4 +373,81 @@
   .hero-section > figure {
     grid-column: 6 / 9;
   }
+
+  /* Reviews */
+  /* Reviews */
+  /* Reviews */
+
+  .reviews .review-card {
+    padding: 32px 8px;
+  }
+}
+
+@media only screen and (max-width: 823px) {
+  /* Why me */
+
+  .why-me .double-box > div:last-child h3 {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* My workflow */
+  /* My workflow */
+  /* My workflow */
+
+  /* .workflow-steps {
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 64px;
+    align-items: center;
+  }
+
+  .workflow-section .dividing-line-vertical:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .workflow-section .dividing-line-vertical {
+    height: 80px;
+  }
+
+  .workflow-section .dividing-line-vertical:nth-child(2),
+  .workflow-section .dividing-line-vertical:nth-child(1) {
+    display: none;
+  }
+
+  .single-step {
+    row-gap: 24px;
+  } */
+
+  /* REVIEWS */
+  /* REVIEWS */
+  /* REVIEWS */
+
+  /* .reviews {
+    row-gap: 64px;
+  }
+
+  .reviews h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
+  }
+
+  .reviews .review-card {
+    grid-row: 2 / 3;
+    grid-column: 5 / -1;
+  }
+
+  .reviews .review-card:nth-child(2) {
+    grid-row: 3 / 4;
+    transform: translateY(0);
+    grid-column: 1 / 5;
+  }
+
+  .reviews .review-card:nth-child(3) {
+    grid-row: 4 / 5;
+    grid-column: 5 / 9;
+    margin-top: 0;
+  } */
 }

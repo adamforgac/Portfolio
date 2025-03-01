@@ -114,7 +114,7 @@ body {
   color: var(--text-dark);
   overflow-x: hidden;
   height: 100%;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 ol,
@@ -191,7 +191,8 @@ table {
   --line-height-xxs: 1rem;
 
   /* Border Radius */
-  --radius-xl: 80px;
+  --radius-xxl: 80px;
+  --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 8px;
@@ -235,7 +236,7 @@ table {
 }
 
 .hero-section .full-textbox span {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .hero-section img {
@@ -302,7 +303,7 @@ table {
 .work-card {
   background: var(--bg-light);
   padding: 16px 16px 16px 40px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
 }
 
 .work-cards {
@@ -360,7 +361,7 @@ table {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   padding: 4px 16px;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-xxl);
   border: 1px solid #000;
 }
 
@@ -370,6 +371,10 @@ table {
 
 .workflow-section {
   row-gap: var(--inner-gap);
+}
+
+.dividing-line-vertical {
+  height: 104px;
 }
 
 .workflow-steps {
@@ -387,7 +392,7 @@ table {
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 32px;
 }
 
 .single-step svg {
@@ -530,6 +535,7 @@ table {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
+  gap: 16px;
 }
 
 .why-me .vertical-icon-box svg {
@@ -549,7 +555,7 @@ table {
 
 .double-box > div {
   background: var(--bg-light);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 24px 16px 16px 16px;
   gap: 16px;
   display: flex;
@@ -560,9 +566,18 @@ table {
   margin-top: 32px;
 }
 
+.why-me .vertical-icon-box h3 {
+  text-align: center;
+}
+
 .why-me .lottie-animation {
-  border-radius: var(--radius-md);
   margin-top: auto;
+}
+
+.lottie-animation {
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #282828;
 }
 
 .double-box .horizontal-icon-box,
@@ -572,9 +587,6 @@ table {
 
 .earth-box {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
   align-items: center;
 }
 

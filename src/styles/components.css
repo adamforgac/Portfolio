@@ -82,7 +82,7 @@
   padding: 12px 24px;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-xxl);
   background: var(--cta-color);
   color: var(--text-light);
   font-family: var(--font-main);
@@ -98,7 +98,7 @@
   padding: 12px 24px;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-xxl);
   background: var(--transparent);
   color: var(--text-dark);
   font-family: var(--font-main);
@@ -209,4 +209,12 @@ nav ul li a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+/* ANIMATION FRAME SETTINGS */
+
+.lottie-animation {
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #282828;
 }
