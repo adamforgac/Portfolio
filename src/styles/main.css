@@ -339,7 +339,7 @@ table {
   transform: translate(-50%, -50%); /* Center the image */
   /* width: 100%;
   min-height: 100%; */
-  height: 120%;
+  height: calc(100% + 60px);
   width: 100%;
   object-fit: cover;
   transition: transform 0.2s ease-out;
@@ -371,6 +371,21 @@ table {
 
 .workflow-section {
   row-gap: var(--inner-gap);
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.workflow-section h2 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.workflow-section > button {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
 }
 
 .dividing-line-vertical {
@@ -475,7 +490,6 @@ table {
   display: flex;
   gap: 8px;
   border-radius: var(--radius-sm);
-  border-radius: 8px;
   background: rgba(255, 255, 255, 0.24);
   backdrop-filter: blur(8px);
   /* lepší podpora pro prohlížeče */
@@ -742,8 +756,8 @@ table {
 
 /* Positions for each icon */
 .final-cta .icon-banner:nth-child(1) {
-  left: 10%;
-  top: 72%;
+  left: 16%;
+  top: 64%;
 }
 
 .final-cta .icon-banner:nth-child(2) {
@@ -758,17 +772,17 @@ table {
 
 .final-cta .icon-banner:nth-child(4) {
   left: 80%;
-  top: 50%;
+  top: 70%;
 }
 
 .final-cta .icon-banner:nth-child(5) {
-  left: 20%;
-  top: 55%;
+  left: 5%;
+  top: 75%;
 }
 
 .final-cta .icon-banner:nth-child(6) {
-  left: 90%;
-  top: 70%;
+  left: 93%;
+  top: 85%;
 }
 
 .final-cta h2 {
@@ -820,14 +834,27 @@ footer svg {
 
 .cloud-space img {
   animation: circle 11s ease-in-out infinite alternate;
+  position: absolute;
+  width: 230px;
+  left: 5%;
+  top: 15%;
+  z-index: 0;
 }
 
 .cloud-space img:nth-child(2) {
   animation: circle 8s ease-in-out infinite alternate;
+  left: 70%;
+  top: 5%;
+  z-index: 100;
+  width: 250px;
 }
 
 .cloud-space img:last-child {
   animation: circle 9s linear infinite;
+  left: 30%;
+  top: 5%;
+  z-index: 100;
+  width: 220px;
 }
 
 footer svg {
@@ -835,28 +862,6 @@ footer svg {
   display: block;
   max-width: 1280px;
   z-index: 100;
-}
-
-footer img {
-  position: absolute;
-  width: 230px;
-  left: 5%;
-  top: 30%;
-  z-index: 0;
-}
-
-footer img:nth-child(2) {
-  left: 70%;
-  top: 5%;
-  z-index: 0;
-  width: 250px;
-}
-
-footer img:nth-child(3) {
-  left: 30%;
-  top: 5%;
-  z-index: 100;
-  width: 220px;
 }
 
 .info-panel {

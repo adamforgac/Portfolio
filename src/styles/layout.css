@@ -51,13 +51,6 @@
   align-items: center;
 }
 
-.width-textbox {
-  display: flex;
-  grid-column: 1 / -1;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .full-textbox {
   display: flex;
   flex-direction: column;
