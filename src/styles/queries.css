@@ -7,7 +7,7 @@
     grid-column: 1 / 8;
   }
 
-  .hero-section > picture {
+  .hero-section > img {
     grid-column: 8 / 13;
   }
 
@@ -137,7 +137,7 @@
     grid-column: 1 / 5;
   }
 
-  .hero-section > picture {
+  .hero-section > img {
     grid-column: 5 / 9;
   }
 
@@ -370,7 +370,7 @@
     grid-column: 1 / 6;
   }
 
-  .hero-section > picture {
+  .hero-section > img {
     grid-column: 6 / 9;
   }
 
@@ -442,7 +442,7 @@
     grid-column: 1 / -1;
   }
 
-  .hero-section > picture {
+  .hero-section > img {
     grid-column: 5 / 9;
   }
 
