@@ -107,14 +107,18 @@ section {
   display: block;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 body {
   line-height: 1;
   background-color: var(--bg-main);
   font-family: var(--font-main);
   color: var(--text-dark);
-  overflow-x: hidden;
   height: 100%;
-  /* width: 100vw; */
 }
 
 ol,
@@ -575,9 +579,9 @@ table {
 }
 
 .lottie-animation {
-    overflow: hidden;
-    border-radius: 16px;
-    background-color: #282828;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #282828;
 }
 
 .double-box .horizontal-icon-box,
