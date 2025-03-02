@@ -7,7 +7,7 @@
     grid-column: 1 / 8;
   }
 
-  .hero-section > figure {
+  .hero-section > picture {
     grid-column: 8 / 13;
   }
 
@@ -91,7 +91,7 @@
   }
 
   .outer-section {
-    margin-top: 144px;
+    margin-top: 128px;
   }
 
   .decorative-animation {
@@ -137,7 +137,7 @@
     grid-column: 1 / 5;
   }
 
-  .hero-section > figure {
+  .hero-section > picture {
     grid-column: 5 / 9;
   }
 
@@ -150,7 +150,7 @@
   /* Image slider section */
 
   .image-slider > div {
-    height: 120px;
+    height: 150px;
   }
 
   .image-slider img,
@@ -370,7 +370,7 @@
     grid-column: 1 / 6;
   }
 
-  .hero-section > figure {
+  .hero-section > picture {
     grid-column: 6 / 9;
   }
 
@@ -392,6 +392,64 @@
 }
 
 @media only screen and (max-width: 768px) {
+  :root {
+    /* Perfect Four Typography Scale */
+    --font-size-xl: 2.369rem;
+    --line-height-xl: 2.75rem;
+
+    --font-size-lg: 1.777rem;
+    --line-height-lg: 2rem;
+
+    --font-size-md: 1.333rem;
+    --line-height-md: 1.75rem;
+
+    --font-size-base: 1rem;
+    --line-height-base: 1.5rem;
+
+    --font-size-xs: 0.75rem;
+    --line-height-xs: 1rem;
+
+    --font-size-xxs: 0.563rem;
+    --line-height-xxs: 1rem;
+
+    /* Grid System */
+    --grid-columns: 4;
+    --grid-margin: 16px;
+    --grid-gutter: 16px;
+  }
+
+  .regular-container {
+    width: calc(100% - 32px);
+  }
+
+  .regular-textbox {
+    gap: 16px;
+  }
+
+  .full-textbox {
+    gap: 16px;
+  }
+
+  .heading-textbox {
+    gap: 32px;
+  }
+
+  /* Hero section */
+  /* Hero section */
+  /* Hero section */
+
+  .hero-section > div {
+    grid-column: 1 / -1;
+  }
+
+  .hero-section > picture {
+    grid-column: 5 / 9;
+  }
+
+  .hero-section .full-textbox span {
+    margin-bottom: 4px;
+  }
+
   /* My workflow */
   /* My workflow */
   /* My workflow */

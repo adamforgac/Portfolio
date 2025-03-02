@@ -234,7 +234,7 @@ table {
   grid-column: 1 / 7;
 }
 
-.hero-section > figure {
+.hero-section > picture {
   grid-column: 7 / 13;
   height: 100%;
 }
