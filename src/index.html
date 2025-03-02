@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/queries.css" />
 
+    <script src="scripts/main.js"></script>
     <script defer src="scripts/loadComponent.js"></script>
   </head>
 
@@ -107,8 +108,6 @@
           <div class="hamburger-menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="42"
-              height="42"
               viewBox="0 0 42 42"
               fill="none"
             >
@@ -161,13 +160,18 @@
       <section class="full-width-container outer-section image-slider">
         <div class="strip-one">
           <picture>
-            <img src="assets/images/image-section/ddu.webp" alt="Adam Forgáč" />
+            <img
+              src="assets/images/image-section/ddu.webp"
+              alt="Adam Forgáč"
+              class="lazy-load"
+            />
           </picture>
 
           <picture>
             <img
               src="assets/images/image-section/seo100.webp"
               alt="Adam Forgáč"
+              class="lazy-load"
             />
           </picture>
 
@@ -203,6 +207,7 @@
             <img
               src="assets/images/image-section/404-opt-better.webp"
               alt="Adam Forgáč"
+              class="lazy-load"
             />
           </picture>
 
@@ -210,6 +215,7 @@
             <img
               src="assets/images/image-section/state-dark.webp"
               alt="Adam Forgáč"
+              class="lazy-load"
             />
           </picture>
         </div>
@@ -218,6 +224,7 @@
           <picture>
             <img
               src="assets/images/image-section/ono-opt-v1-smaller.webp"
+              class="lazy-load"
               alt="Adam Forgáč"
             />
           </picture>
@@ -226,6 +233,7 @@
             <img
               src="assets/images/image-section/color-palette-2.webp"
               alt="Adam Forgáč"
+              class="lazy-load"
             />
           </picture>
 
@@ -268,6 +276,7 @@
             <img
               src="assets/images/image-section/smaller-ono.webp"
               alt="Adam Forgáč"
+              class="lazy-load"
             />
           </picture>
 
@@ -275,6 +284,7 @@
             <img
               src="assets/images/image-section/bp100.webp"
               alt="Adam Forgáč"
+              class="lazy-load"
             />
           </picture>
         </div>
@@ -406,7 +416,6 @@
                 <div class="tags-box">
                   <span>Partial design</span>
                   <span>Development</span>
-                  <span>In progress</span>
                 </div>
               </div>
             </div>
@@ -435,6 +444,7 @@
 
                 <div class="tags-box">
                   <span>Design</span>
+                  <span>Graphics</span>
                 </div>
               </div>
             </div>
@@ -972,7 +982,7 @@
         <h2 class="heading-style-1">
           What my clients and co&#8209;workers
           <span class="decorative-text decorative-animation">
-            say about me
+            say&nbsp;about&nbsp;me
           </span>
         </h2>
 
@@ -1006,9 +1016,9 @@
             />
 
             <div class="profile-info">
-              <h3 class="heading-style-4">Jitka</h3>
+              <h3 class="heading-style-4">Jakub</h3>
 
-              <p class="secondary-paragraph">Koučka, HR expert</p>
+              <p class="secondary-paragraph">Programátor, Designér</p>
             </div>
           </div>
 
@@ -1028,9 +1038,9 @@
             />
 
             <div class="profile-info">
-              <h3 class="heading-style-4">Jitka</h3>
+              <h3 class="heading-style-4">Vladimír</h3>
 
-              <p class="secondary-paragraph">Koučka, HR expert</p>
+              <p class="secondary-paragraph">Ředitel KHS</p>
             </div>
           </div>
 

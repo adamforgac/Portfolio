@@ -39,7 +39,7 @@
 
 .secondary-paragraph {
   font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  line-height: 1.25rem;
   font-weight: 200;
 }
 
@@ -123,6 +123,10 @@ header {
   margin-top: 32px;
 }
 
+.hamburger-menu svg {
+  height: 40px;
+}
+
 nav {
   display: flex;
   width: 100%;
@@ -159,7 +163,7 @@ nav ul {
   right: 0;
   bottom: 0;
   background-color: #e9eaf0;
-  border-radius: 50px;
+  border-radius: var(--radius-xxl);
   transition: 0.4s;
   display: flex;
   align-items: center;

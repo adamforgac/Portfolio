@@ -349,14 +349,6 @@
     border-radius: var(--font-size-lg);
   }
 
-  .horizontal-icon-box svg {
-    display: none;
-  }
-
-  .horizontal-icon-box {
-    grid-template-columns: 1fr;
-  }
-
   .work-text {
     grid-column: 1 / -1;
     display: flex;
@@ -473,6 +465,10 @@
     --grid-gutter: 16px;
   }
 
+  .heading-style-1 {
+    font-weight: 300;
+  }
+
   .regular-container {
     width: calc(100% - 32px);
   }
@@ -526,11 +522,11 @@
   /* Image slider section */
   /* Image slider section */
 
-  .image-slider {
+  /* .image-slider {
     display: none;
-  }
+  } */
 
-  /* .image-slider > div {
+  .image-slider > div {
     height: 130px;
   }
 
@@ -541,7 +537,7 @@
   .image-slider img,
   .image-slider picture {
     border-radius: var(--radius-md);
-  } */
+  }
 
   /* Work section */
   /* Work section */
@@ -557,11 +553,7 @@
 
   .work-image {
     grid-column: 1 / -1;
-    height: 300px;
-  }
-
-  .work-image img {
-    height: calc(100% + 60px);
+    height: 400px;
   }
 
   .work-card {
@@ -569,7 +561,12 @@
   }
 
   .tags-box {
-    gap: var(--gap-sm);
+    gap: var(--gap-xs);
+  }
+
+  .tags-box span {
+    font-size: var(--font-size-xs);
+    padding: 2px 12px;
   }
 
   /* My workflow */
@@ -692,7 +689,7 @@
 
   .why-me .horizontal-icon-box svg {
     display: inline;
-    height: 40px;
+    height: 32px;
   }
 
   .horizontal-icon-box {
@@ -715,6 +712,10 @@
   .why-me .triple-box {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .why-me .double-box .lottie-animation {
+    margin-top: 32px;
   }
 
   .why-me .triple-box .lottie-animation {
@@ -754,6 +755,10 @@
     grid-row: 4 / 5;
     grid-column: 1 / 4;
     margin-top: 0;
+  }
+
+  .profile-info {
+    gap: 4px;
   }
 
   /* Final cta */
@@ -834,6 +839,14 @@
 }
 
 @media only screen and (max-width: 600px) {
+  /* Work section */
+  /* Work section */
+  /* Work section */
+
+  .work-image {
+    height: 350px;
+  }
+
   /* Final cta */
   /* Final cta */
   /* Final cta */
@@ -875,6 +888,76 @@
 }
 
 @media only screen and (max-width: 500px) {
+  /* header */
+  /* header */
+  /* header */
+
+  .hamburger-menu svg {
+    height: 32px;
+  }
+
+  .slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* na ikonky */
+    padding: auto;
+  }
+
+  .theme-switch {
+    width: 64px;
+    height: 32px;
+  }
+
+  .slider svg {
+    z-index: 100;
+  }
+
+  .slider::before {
+    width: 26px;
+    height: 26px;
+    /* na posuvnik (černý podklad ikonky)*/
+    left: 4px;
+    border-radius: var(--radius-xxl);
+    transition: 0.4s;
+  }
+
+  /* input:checked + .slider {
+  background-color: #3183fc;
+} */
+
+  input:checked + .slider::before {
+    transform: translateX(30px);
+  }
+
+  /* Hero section */
+  /* Hero section */
+  /* Hero section */
+
+  .hero-section .button-box {
+    display: grid;
+    grid-template-columns: 192px;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
+
+  /* Image slider */
+  /* Image slider */
+  /* Image slider */
+
+  .image-slider > div {
+    height: 100px;
+  }
+
+  /* Work section */
+  /* Work section */
+  /* Work section */
+
+  .work-image {
+    height: 300px;
+  }
+
   /* Workflow */
   /* Workflow */
   /* Workflow */
@@ -973,7 +1056,16 @@
   /* Reviews  */
 
   .reviews h2 .decorative-text {
-    margin-left: 50%;
+    margin-left: 35%;
+  }
+
+  .reviews .review-card {
+    padding: 24px 16px;
+  }
+
+  .review-card img {
+    width: 64px;
+    height: 88px;
   }
 
   /* Final cta */
@@ -1101,6 +1193,24 @@
 
   .info-panel span {
     font-size: 0.8rem;
+  }
+
+  /* Reviews */
+
+  .reviews .review-card {
+    padding: 24px 8px;
+  }
+
+  .reviews .review-card {
+    grid-column: 1 / -1;
+  }
+
+  .reviews .review-card:nth-child(2) {
+    grid-column: 1 / -1;
+  }
+
+  .reviews .review-card:nth-child(3) {
+    grid-column: 1 / -1;
   }
 }
 
