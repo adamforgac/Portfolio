@@ -332,6 +332,21 @@
   footer .info-panel {
     padding: 8px 40px;
   }
+
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+
+  .question-section .regular-textbox {
+    grid-column: 1 / 5;
+  }
+
+  .question-cards {
+    grid-column: 5 / -1;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -628,6 +643,7 @@
 
   .contact-me {
     padding: 56px 0;
+    width: 100%;
   }
 
   .contact-me .regular-textbox {
@@ -835,6 +851,47 @@
 
   footer .info-panel {
     padding: 8px 16px;
+  }
+
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+  /* Contact page */
+
+  .question-section .regular-textbox {
+    grid-column: 1 / -1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .question-cards {
+    grid-column: 1 / -1;
+  }
+
+  .question-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: var(--inner-gap);
+  }
+
+  /* Contact steps */
+  /* Contact steps */
+  /* Contact steps */
+
+  .contact-steps .dividing-line-vertical {
+    display: none;
+  }
+
+  .contact-steps {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 56px;
+  }
+
+  .question-header, .answer {
+    padding: 24px 16px;
   }
 }
 

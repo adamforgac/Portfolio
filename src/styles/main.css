@@ -400,7 +400,7 @@ table {
 }
 
 .dividing-line-vertical {
-  background-color: black;
+  background-color: var(--text-dark);
 }
 
 .single-step {
@@ -873,4 +873,128 @@ footer svg {
   align-items: center;
   margin-top: 4px;
   padding: 8px 80px;
+}
+
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+
+.contact-hero-section {
+  align-items: center;
+  row-gap: var(--inner-gap);
+}
+
+.contact-hero-section > h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.dividing-line-vertical {
+  height: 104px;
+}
+
+.contact-steps {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  column-gap: 32px;
+  align-items: center;
+}
+
+.dividing-line-vertical {
+  background-color: var(--text-dark);
+}
+
+.single-step {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.single-step svg {
+  height: 32px;
+}
+
+.single-step h3 {
+  text-align: center;
+}
+
+/* Question box */
+/* Question box */
+/* Question box */
+
+.question-section .regular-textbox {
+  align-items: start;
+  grid-column: 1 / 7;
+}
+
+.question-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-column: 7 / 13;
+}
+
+.question {
+  border-top: 1px solid var(--text-dark);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: padding 0.3s ease-in-out;
+}
+
+.question svg {
+  height: 20px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  width: 100%;
+  gap: 24px;
+}
+
+.question svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.answer-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.answer {
+  opacity: 0;
+  padding: 24px;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.question.active {
+  padding-bottom: 24px;
+}
+
+.question.active .answer-container {
+  max-height: auto;
+}
+
+.question.active .answer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.question.active svg {
+  transform: rotate(45deg);
+}
+
+.question:last-child {
+  border-bottom: 1px solid var(--text-dark);
 }

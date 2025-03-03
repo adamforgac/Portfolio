@@ -32,6 +32,16 @@
   line-height: var(--line-height-base);
 }
 
+.heading-style-5 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.heading-style-6 {
+  font-size: var(--font-size-base);
+  line-height: 1.25;
+}
+
 .primary-paragraph {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
