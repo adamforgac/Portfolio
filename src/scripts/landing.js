@@ -69,3 +69,80 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', updateParallax);
 });
+
+// Image slider
+
+document.addEventListener('DOMContentLoaded', function () {
+  const stripOne = document.querySelector('.strip-one');
+  const stripTwo = document.querySelector('.strip-two');
+  const sliderSection = document.querySelector('.image-slider');
+  let animationRunning = false;
+  let positionOne = 0;
+  let positionTwo = 0;
+  let directionOne = 1;
+  let directionTwo = -1;
+  let animationFrameOne;
+  let animationFrameTwo;
+
+  function animateStrip(strip, speed, position, direction, updatePosition) {
+    function animate() {
+      if (!animationRunning) return;
+
+      const stripWidth = strip.scrollWidth;
+      const parentWidth = strip.parentElement.clientWidth;
+
+      position += speed * direction;
+      strip.style.transform = `translateX(${position}px)`;
+
+      if (position >= stripWidth - parentWidth) {
+        direction = -1;
+      } else if (position <= 0) {
+        direction = 1;
+      }
+
+      updatePosition(position, direction); // uloží si pozici a směr, aby věděl, z kama potom pokračovat a nedělalo to bug
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+
+  // Aby zbytečně nejelo na pozadí
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!animationRunning) {
+            animationRunning = true;
+            animateStrip(
+              stripOne,
+              0.3,
+              positionOne,
+              directionOne,
+              (pos, dir) => {
+                positionOne = pos;
+                directionOne = dir;
+              }
+            );
+            animateStrip(
+              stripTwo,
+              0.2,
+              positionTwo,
+              directionTwo,
+              (pos, dir) => {
+                positionTwo = pos;
+                directionTwo = dir;
+              }
+            );
+          }
+        } else {
+          animationRunning = false;
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(sliderSection);
+});

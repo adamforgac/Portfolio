@@ -642,7 +642,7 @@
   /* Contact me */
 
   .contact-me {
-    padding: 56px 0;
+    padding: 40px 0;
     width: 100%;
   }
 
@@ -890,7 +890,8 @@
     row-gap: 56px;
   }
 
-  .question-header, .answer {
+  .question-header,
+  .answer {
     padding: 24px 16px;
   }
 }
@@ -953,11 +954,11 @@
     height: 32px;
   }
 
+  nav ul {
+    gap: 24px;
+  }
+
   .slider {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     /* na ikonky */
     padding: auto;
   }
@@ -1128,6 +1129,10 @@
   /* Final cta */
   /* Final cta */
   /* Final cta */
+
+  .final-cta {
+    padding: 64px 16px;
+  }
 
   .final-cta .icon-banner:nth-child(1) {
     left: 7%;
