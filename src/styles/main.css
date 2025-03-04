@@ -935,6 +935,10 @@ footer svg {
   row-gap: var(--inner-gap);
 }
 
+.contact-hero-section a {
+    color: var(--text-dark);
+}
+
 .contact-hero-section > h1 {
   grid-column: 1 / -1;
   text-align: center;
