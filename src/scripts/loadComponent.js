@@ -1,1 +1,0 @@
-// Loads components like header and footer

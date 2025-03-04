@@ -17,108 +17,40 @@
     <link rel="stylesheet" href="styles/queries.css" />
 
     <script src="scripts/main.js"></script>
-    <script defer src="scripts/loadComponent.js"></script>
   </head>
 
   <body>
     <div class="wrapper">
       <header class="regular-container">
         <nav>
-          <label class="theme-switch">
-            <input type="checkbox" id="theme-toggle" />
-            <span class="slider">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 15 15"
-                fill="none"
-              >
-                <path
-                  d="M7.46528 0C7.75293 0 7.98611 0.233185 7.98611 0.520833V1.21528C7.98611 1.50293 7.75293 1.73611 7.46528 1.73611C7.17763 1.73611 6.94444 1.50293 6.94444 1.21528V0.520833C6.94444 0.233185 7.17763 0 7.46528 0Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M3.47222 7.46528C3.47222 5.25997 5.25997 3.47222 7.46528 3.47222C9.67058 3.47222 11.4583 5.25997 11.4583 7.46528C11.4583 9.67058 9.67058 11.4583 7.46528 11.4583C5.25997 11.4583 3.47222 9.67058 3.47222 7.46528ZM7.46528 4.51389C5.83527 4.51389 4.51389 5.83527 4.51389 7.46528C4.51389 9.09528 5.83527 10.4167 7.46528 10.4167C9.09528 10.4167 10.4167 9.09528 10.4167 7.46528C10.4167 5.83527 9.09528 4.51389 7.46528 4.51389Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M2.92311 2.18654C2.71971 1.98315 2.38994 1.98315 2.18654 2.18654C1.98314 2.38994 1.98314 2.71972 2.18654 2.92311L2.67759 3.41416C2.88098 3.61756 3.21076 3.61756 3.41416 3.41416C3.61755 3.21076 3.61755 2.88099 3.41416 2.67759L2.92311 2.18654Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M14.9306 7.46528C14.9306 7.75293 14.6974 7.98611 14.4097 7.98611H13.7153C13.4276 7.98611 13.1944 7.75293 13.1944 7.46528C13.1944 7.17763 13.4276 6.94444 13.7153 6.94444H14.4097C14.6974 6.94444 14.9306 7.17763 14.9306 7.46528Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M12.744 2.92311C12.9474 2.71971 12.9474 2.38994 12.744 2.18654C12.5406 1.98314 12.2108 1.98314 12.0074 2.18654L11.5164 2.67759C11.313 2.88098 11.313 3.21076 11.5164 3.41416C11.7198 3.61755 12.0496 3.61755 12.253 3.41416L12.744 2.92311Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M7.46528 13.1944C7.75293 13.1944 7.98611 13.4276 7.98611 13.7153V14.4097C7.98611 14.6974 7.75293 14.9306 7.46528 14.9306C7.17763 14.9306 6.94444 14.6974 6.94444 14.4097V13.7153C6.94444 13.4276 7.17763 13.1944 7.46528 13.1944Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M12.253 11.5164C12.0496 11.313 11.7198 11.313 11.5164 11.5164C11.313 11.7198 11.313 12.0496 11.5164 12.253L12.0075 12.744C12.2109 12.9474 12.5407 12.9474 12.7441 12.744C12.9475 12.5406 12.9475 12.2108 12.7441 12.0075L12.253 11.5164Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M1.73611 7.46528C1.73611 7.75293 1.50293 7.98611 1.21528 7.98611H0.520833C0.233185 7.98611 0 7.75293 0 7.46528C0 7.17763 0.233185 6.94444 0.520833 6.94444H1.21528C1.50293 6.94444 1.73611 7.17763 1.73611 7.46528Z"
-                  fill="#E9EAF0"
-                />
-                <path
-                  d="M3.41411 12.253C3.61751 12.0496 3.61751 11.7198 3.41411 11.5164C3.21071 11.313 2.88094 11.313 2.67754 11.5164L2.18649 12.0074C1.98309 12.2108 1.98309 12.5406 2.18649 12.744C2.38989 12.9474 2.71966 12.9474 2.92306 12.744L3.41411 12.253Z"
-                  fill="#E9EAF0"
-                />
-              </svg>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 17 17"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M7.38116 0.692092C7.88417 1.15004 7.76333 1.85084 7.5312 2.36694L7.53078 2.36788C7.18557 3.13187 6.99615 3.96846 7.00318 4.85285L7.00319 4.85505C7.0172 8.13109 9.836 10.9581 13.3269 11.0963L13.3274 11.0964C13.8417 11.1171 14.3333 11.0826 14.8105 10.9999C15.1242 10.9446 15.4294 10.9352 15.7028 10.997C15.9798 11.0595 16.2628 11.2062 16.4407 11.4881C16.6198 11.7719 16.6287 12.0915 16.5606 12.3687C16.494 12.6403 16.3479 12.905 16.1586 13.1533C14.5066 15.3416 11.7632 16.72 8.70901 16.5917L8.70866 16.5917C4.37764 16.4073 0.725409 13.0486 0.422654 8.86055C0.146127 5.1485 2.42201 1.93069 5.70399 0.590594C6.22996 0.374894 6.9111 0.264146 7.38116 0.692092ZM6.52627 1.60137C6.4471 1.60723 6.32509 1.6328 6.15867 1.70112L6.15762 1.70155C3.30647 2.86573 1.38513 5.63105 1.61938 8.772L1.61949 8.77341C1.87467 12.3079 4.99042 15.2321 8.75935 15.3928C11.4197 15.5045 13.7869 14.3041 15.2017 12.4292L15.2036 12.4266C15.2906 12.3126 15.3411 12.2224 15.3691 12.1573C15.292 12.1508 15.1771 12.1537 15.0184 12.1818L15.0165 12.1821C14.4565 12.2792 13.8798 12.3196 13.2795 12.2954C9.19705 12.1337 5.82079 8.82794 5.80321 4.86128C5.79491 3.79675 6.02359 2.78935 6.43703 1.87419C6.49179 1.75237 6.51636 1.66218 6.52627 1.60137ZM6.61207 1.60459C6.61205 1.60462 6.61144 1.60446 6.61031 1.60405Z"
-                  fill="#E9EAF0"
-                />
-              </svg>
-            </span>
-          </label>
-
-          <ul>
-            <li>
-              <a href="#">CZ</a>
-            </li>
-
-            <li>
-              <a class="active-language" href="#">EN</a>
-            </li>
-
-            <li>
-              <a href="#">DE</a>
-            </li>
-          </ul>
-
-          <div class="hamburger-menu">
+          <a href="index.html">
             <svg
+              class="logo"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 42 42"
+              viewBox="0 0 34 10"
               fill="none"
             >
               <path
-                d="M42 21C42 32.598 32.598 42 21 42C9.40202 42 0 32.598 0 21C0 9.40202 9.40202 0 21 0C32.598 0 42 9.40202 42 21Z"
-                fill="#282828"
+                d="M5.472 8.13974H1.824L1.152 9.99974H0L3.024 1.68374H4.284L7.296 9.99974H6.144L5.472 8.13974ZM5.16 7.25174L3.648 3.02774L2.136 7.25174H5.16Z"
+                fill="black"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M14.57 13C14.57 12.3649 15.0849 11.85 15.72 11.85H33C33.6351 11.85 34.15 12.3649 34.15 13C34.15 13.6351 33.6351 14.15 33 14.15H15.72C15.0849 14.15 14.57 13.6351 14.57 13ZM33 22.15L8 22.15C7.36487 22.15 6.85 21.6351 6.85 21C6.85 20.3649 7.36487 19.85 8 19.85L33 19.85C33.6351 19.85 34.15 20.3649 34.15 21C34.15 21.6351 33.6351 22.15 33 22.15ZM14.57 29C14.57 28.3649 15.0849 27.85 15.72 27.85L33 27.85C33.6351 27.85 34.15 28.3649 34.15 29C34.15 29.6351 33.6351 30.15 33 30.15L15.72 30.15C15.0849 30.15 14.57 29.6351 14.57 29Z"
-                fill="white"
+                d="M11.2179 1.63574C12.1299 1.63574 12.9179 1.80774 13.5819 2.15174C14.2539 2.48774 14.7659 2.97174 15.1179 3.60374C15.4779 4.23574 15.6579 4.97974 15.6579 5.83574C15.6579 6.69174 15.4779 7.43574 15.1179 8.06774C14.7659 8.69174 14.2539 9.17174 13.5819 9.50774C12.9179 9.83574 12.1299 9.99974 11.2179 9.99974H8.61394V1.63574H11.2179ZM11.2179 9.09974C12.2979 9.09974 13.1219 8.81574 13.6899 8.24774C14.2579 7.67174 14.5419 6.86774 14.5419 5.83574C14.5419 4.79574 14.2539 3.98374 13.6779 3.39974C13.1099 2.81574 12.2899 2.52374 11.2179 2.52374H9.70594V9.09974H11.2179Z"
+                fill="black"
               />
+              <path
+                d="M22.0423 8.13974H18.3943L17.7223 9.99974H16.5703L19.5943 1.68374H20.8543L23.8663 9.99974H22.7143L22.0423 8.13974ZM21.7303 7.25174L20.2183 3.02774L18.7063 7.25174H21.7303Z"
+                fill="black"
+              />
+              <path
+                d="M33.6683 1.69574V9.99974H32.5763V3.80774L29.8162 9.99974H29.0483L26.2763 3.79574V9.99974H25.1842V1.69574H26.3603L29.4323 8.55974L32.5042 1.69574H33.6683Z"
+                fill="black"
+              />
+              <line x1="19" y1="0.5" x2="34" y2="0.500001" stroke="black" />
             </svg>
-          </div>
+          </a>
+
+          <a class="cta-two" href="contact.html">Contact me</a>
         </nav>
       </header>
 
@@ -142,12 +74,7 @@
           </p>
 
           <div class="button-box">
-            <button class="cta-one">
-              <a href="form.html">Start the project</a>
-            </button>
-            <button class="cta-two">
-              <a href="contact.html">Contact me</a>
-            </button>
+            <a class="cta-one" href="form.html">Start the project</a>
           </div>
         </div>
 
@@ -320,8 +247,10 @@
 
               <div class="paragraph-tags-box">
                 <p class="primary-paragraph">
-                  Here are some of my recent projects I managed to design while
-                  studying at high school. Some of these are still in progress.
+                  A showcase of my recent web design projects, demonstrating my
+                  skills in UI/UX, development, and branding. Designed with a
+                  modern, responsive layout to highlight diverse creative
+                  solutions.
                 </p>
 
                 <div class="tags-box">
@@ -350,8 +279,9 @@
 
               <div class="paragraph-tags-box">
                 <p class="primary-paragraph">
-                  Here are some of my recent projects I managed to design while
-                  studying at high school. Some of these are still in progress.
+                  A clean and professional landing page for a dental clinic,
+                  focusing on user-friendly navigation, trust-building elements,
+                  and a strong call to action for appointment bookings.
                 </p>
 
                 <div class="tags-box">
@@ -380,8 +310,9 @@
 
               <div class="paragraph-tags-box">
                 <p class="primary-paragraph">
-                  Here are some of my recent projects I managed to design while
-                  studying at high school. Some of these are still in progress.
+                  A partially developed project for a government contract,
+                  featuring a structured design and branding elements to ensure
+                  a strong, authoritative digital presence.
                 </p>
 
                 <div class="tags-box">
@@ -409,8 +340,9 @@
 
               <div class="paragraph-tags-box">
                 <p class="primary-paragraph">
-                  Here are some of my recent projects I managed to design while
-                  studying at high school. Some of these are still in progress.
+                  An e-commerce platform designed to showcase and sell premium
+                  Springfree trampolines across Central Europe, optimized for a
+                  seamless shopping experience.
                 </p>
 
                 <div class="tags-box">
@@ -438,8 +370,9 @@
 
               <div class="paragraph-tags-box">
                 <p class="primary-paragraph">
-                  Here are some of my recent projects I managed to design while
-                  studying at high school. Some of these are still in progress.
+                  A visually appealing design concept for a café’s holiday
+                  campaign, featuring warm aesthetics and inviting UI elements
+                  to enhance seasonal marketing efforts.
                 </p>
 
                 <div class="tags-box">
@@ -465,8 +398,9 @@
 
               <div class="paragraph-tags-box">
                 <p class="primary-paragraph">
-                  Here are some of my recent projects I managed to design while
-                  studying at high school. Some of these are still in progress.
+                  A sleek, intuitive weather application concept, designed with
+                  a modern interface that delivers precise weather forecasts in
+                  an engaging and user-friendly format.
                 </p>
 
                 <div class="tags-box">
@@ -491,7 +425,7 @@
       <section class="regular-container outer-section workflow-section">
         <h2 class="heading-style-1">My workflow</h2>
 
-        <button class="cta-one">Start the project</button>
+        <a class="cta-one" href="form.html">Start the project</a>
 
         <div class="workflow-steps">
           <div class="single-step">
@@ -712,7 +646,7 @@
           </div>
 
           <div class="click-banner">
-            <h4 class="heading-style-5">Click&nbsp;me</h4>
+            <a class="heading-style-5" href="contact.html">Click&nbsp;me</a>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -729,7 +663,7 @@
           </div>
 
           <div class="click-banner">
-            <h4 class="heading-style-5">Click&nbsp;me</h4>
+            <a class="heading-style-5" href="contact.html">Click&nbsp;me</a>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -746,7 +680,7 @@
           </div>
 
           <div class="click-banner">
-            <h4 class="heading-style-5">Click&nbsp;me</h4>
+            <a class="heading-style-5" href="contact.html">Click&nbsp;me</a>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -763,7 +697,7 @@
           </div>
 
           <div class="click-banner">
-            <h4 class="heading-style-5">Click&nbsp;me</h4>
+            <a class="heading-style-5" href="contact.html">Click&nbsp;me</a>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1053,7 +987,7 @@
             >
           </h2>
 
-          <button class="cta-one">Start today</button>
+          <a class="cta-one" href="form.html">Start today</a>
         </div>
 
         <div class="regular-container icon-space">

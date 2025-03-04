@@ -106,6 +106,8 @@
   font-weight: 400;
   line-height: var(--line-height-base);
   border: none;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .form-submit {
@@ -122,6 +124,8 @@
   font-weight: 400;
   line-height: var(--line-height-base);
   border: none;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .cta-two {
@@ -138,6 +142,43 @@
   font-weight: 400;
   line-height: var(--line-height-base);
   border: 1px solid var(--text-dark);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.cta-one:hover,
+.form-submit:hover {
+  background: var(--cta-hover);
+}
+
+.cta-one:focus,
+.form-submit:focus {
+  border: 2px solid var(--bg-dark);
+}
+
+.cta-one:active,
+.form-submit:active {
+  background: var(--cta-hover);
+}
+
+.cta-one:disabled,
+.form-submit:disabled,
+.cta-two:disabled {
+  background: grey;
+}
+
+.cta-two:hover {
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+}
+
+.cta-two:focus {
+  border: 2px solid var(--cta-color);
+}
+
+.cta-two:active {
+  color: var(--text-light);
+  background-color: var(--bg-dark);
 }
 
 .full-width-line {
@@ -234,7 +275,7 @@ nav ul li a {
   color: var(--text-dark);
 }
 
-.active-language {
+.active-page {
   text-decoration: underline;
 }
 

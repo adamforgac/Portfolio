@@ -98,3 +98,7 @@
   grid-template-columns: 1fr auto;
   gap: 32px;
 }
+
+.logo {
+  width: 104px;
+}
