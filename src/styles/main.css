@@ -93,6 +93,17 @@ a {
   text-decoration: none;
 }
 
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
 article,
 aside,
 details,
@@ -530,6 +541,19 @@ table {
   row-gap: var(--inner-gap);
 }
 
+.why-me .regular-textbox .decorative-text {
+  transform: translateX(80px);
+}
+
+.why-me .regular-textbox .regular-text-part {
+  transform: translateX(-80px);
+}
+
+.why-me h2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .why-me .dividing-line-vertical {
   height: 160px;
 }
@@ -553,7 +577,7 @@ table {
 }
 
 .why-me .vertical-icon-box svg {
-  height: 48px;
+  height: 40px;
 }
 
 .why-me .horizontal-icon-box svg {
@@ -997,4 +1021,147 @@ footer svg {
 
 .question:last-child {
   border-bottom: 1px solid var(--text-dark);
+}
+
+/* FORM PAGE */
+/* FORM PAGE */
+/* FORM PAGE */
+/* FORM PAGE */
+/* FORM PAGE */
+/* FORM PAGE */
+
+/* Aby mi auto complete nerozhodil styly */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-dark) inset !important;
+  -webkit-text-fill-color: var(--text-light) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dá pryč label, když používám autocomplete */
+
+.pole input:-webkit-autofill + label,
+.pole input:-webkit-autofill:focus + label {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.form-hero-section {
+  align-items: center;
+  row-gap: var(--inner-gap);
+}
+
+.form-hero-section > h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.form {
+  grid-column: 1 / -1;
+  border-radius: var(--radius-lg);
+  background: var(--bg-dark);
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.form-text * {
+  color: var(--text-light);
+}
+
+.form-icon-box > div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.form-icon-box svg {
+  height: 16px;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.pole {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pole label {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+/* Když input není prázdný */
+
+.main-form input:focus + label,
+.main-form textarea:focus + label,
+.main-form input:not(:placeholder-shown) + label,
+.main-form textarea:not(:placeholder-shown) + label {
+  top: 0px;
+  font-size: 14px;
+  color: var(--cta-color);
+}
+
+.main-form input:focus,
+.main-form textarea:focus,
+.main-form input:not(:placeholder-shown),
+.main-form textarea:not(:placeholder-shown) {
+  border-bottom: 1px solid var(--cta-color);
+}
+
+.main-form input,
+.main-form textarea {
+  background: var(--transparent);
+  border-bottom: 1px solid rgba(256, 256, 256, 0.4);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-light);
+  height: 48px;
+  font-family: var(--font-main);
+}
+
+.main-form input {
+  padding: 8px;
+}
+
+.main-form textarea {
+  padding: 12px 8px 8px 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.button-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.button-row p {
+  color: var(--text-light);
+}
+
+.form-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
