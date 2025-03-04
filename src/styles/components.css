@@ -120,7 +120,7 @@
   color: var(--text-light);
   font-family: var(--font-main);
   font-size: var(--font-size-base);
-  font-style: normal;
+
   font-weight: 400;
   line-height: var(--line-height-base);
   border: none;
@@ -130,10 +130,11 @@
 
 .cta-two {
   display: flex;
-  padding: 12px 24px;
+  padding: 8px 16px;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius-xxl);
+  border-radius: 0;
+  gap: 16px;
   background: var(--transparent);
   color: var(--text-dark);
   font-family: var(--font-main);
@@ -141,9 +142,18 @@
   font-style: normal;
   font-weight: 400;
   line-height: var(--line-height-base);
-  border: 1px solid var(--text-dark);
+  border-bottom: 1px solid var(--text-dark);
   transition: 0.3s;
   cursor: pointer;
+}
+
+.cta-two svg {
+  height: 20px;
+  transition: 0.3s;
+}
+
+.cta-two svg path {
+  transition: 0.3s;
 }
 
 .cta-one:hover,
@@ -167,9 +177,11 @@
   background: grey;
 }
 
+.cta-two:hover svg path,
 .cta-two:hover {
-  color: var(--text-light);
-  background-color: var(--bg-dark);
+  fill: var(--cta-color);
+  color: var(--cta-color);
+  border-bottom: 1px solid var(--cta-color);
 }
 
 .cta-two:focus {

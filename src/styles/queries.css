@@ -557,9 +557,7 @@
   }
 
   .hero-section .button-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    justify-content: center;
   }
 
   /* Image slider section */
@@ -1046,17 +1044,6 @@
     transform: translateX(30px);
   }
 
-  /* Hero section */
-  /* Hero section */
-  /* Hero section */
-
-  .hero-section .button-box {
-    display: grid;
-    grid-template-columns: 192px;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-  }
-
   /* Image slider */
   /* Image slider */
   /* Image slider */
@@ -1272,27 +1259,6 @@
     left: 5%;
     top: 53%;
   }
-}
-
-@media only screen and (max-width: 390px) {
-  /* Hero section */
-  /* Hero section */
-  /* Hero section */
-
-  .hero-section .button-box {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .hero-section .cta-one,
-  .hero-section .cta-two {
-    width: 169px;
-  }
-
-  /* .hero-section .cta-two {
-    display: none;
-  } */
 }
 
 @media only screen and (max-width: 370px) {

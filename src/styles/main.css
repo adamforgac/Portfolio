@@ -164,7 +164,6 @@ table {
     url('../assets/fonts/PPEditorialOld-UltralightItalic.woff') format('woff');
 }
 
-
 /* Variables */
 
 :root {
@@ -241,6 +240,11 @@ table {
 
 .hero-section {
   align-items: center;
+}
+
+.logo {
+  width: 96px;
+  height: auto;
 }
 
 .hero-section > div {
