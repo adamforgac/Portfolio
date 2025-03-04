@@ -354,6 +354,10 @@
   }
 
   /* Form */
+  /* Form */
+  /* Form */
+  /* Form */
+  /* Form */
 
   .form {
     grid-template-columns: 1fr;
@@ -361,6 +365,11 @@
 
   .form-text {
     display: none;
+  }
+
+  .word-box {
+    padding: 0 40px;
+    height: 64px;
   }
 }
 

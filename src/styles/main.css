@@ -164,6 +164,7 @@ table {
     url('../assets/fonts/PPEditorialOld-UltralightItalic.woff') format('woff');
 }
 
+
 /* Variables */
 
 :root {
@@ -531,9 +532,9 @@ table {
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.24);
   backdrop-filter: blur(8px);
+  padding: 12px 24px;
   /* lepší podpora pro prohlížeče */
   -webkit-backdrop-filter: blur(8px);
-  padding: 12px 24px;
   align-items: center;
   position: absolute;
   left: 5%;
@@ -791,10 +792,11 @@ table {
   padding: 16px;
   position: absolute;
   transition: transform 0.1s ease-out; /* Smooth transition */
+  z-index: 200;
 }
 
 .final-cta .heading-textbox {
-    z-index: 100;
+  z-index: 100;
 }
 
 .icon-banner svg {
@@ -906,7 +908,6 @@ footer svg {
 }
 
 footer svg {
-  width: 100%;
   display: block;
   max-width: 1280px;
   z-index: 100;
@@ -936,7 +937,7 @@ footer svg {
 }
 
 .contact-hero-section a {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
 .contact-hero-section > h1 {
@@ -1162,6 +1163,7 @@ input:-webkit-autofill:active {
   color: var(--text-light);
   height: 48px;
   font-family: var(--font-main);
+  border-radius: 0;
 }
 
 .main-form input {
@@ -1180,10 +1182,11 @@ input:-webkit-autofill:active {
 
 .form-icon-box svg {
   height: 16px;
+  width: 16px;
 }
 
 .form-icon-box {
-  gap: 16px
+  gap: 16px;
 }
 
 .button-row {
