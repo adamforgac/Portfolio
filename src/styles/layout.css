@@ -27,6 +27,11 @@
   margin-top: 144px;
 }
 
+.last-section {
+  margin-top: 144px;
+  margin-bottom: 144px;
+}
+
 /* Udává běžný grid sekcí */
 
 .regular-grid {

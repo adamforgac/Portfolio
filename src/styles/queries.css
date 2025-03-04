@@ -681,14 +681,6 @@
     max-width: 250px;
   }
 
-  .why-me .regular-textbox .decorative-text {
-    transform: translateX(64px);
-  }
-
-  .why-me .regular-textbox .regular-text-part {
-    transform: translateX(-64px);
-  }
-
   .why-me .vertical-icon-box svg {
     height: 32px;
   }
@@ -1092,14 +1084,6 @@
     gap: 32px;
   }
 
-  .why-me .regular-textbox .decorative-text {
-    transform: translateX(32px);
-  }
-
-  .why-me .regular-textbox .regular-text-part {
-    transform: translateX(-32px);
-  }
-
   .earth-box > div {
     grid-column: 1 / -1;
   }
@@ -1252,15 +1236,6 @@
     display: none;
   } */
 
-  /* Why me */
-
-  .why-me .regular-textbox .decorative-text {
-    transform: translateX(0px);
-  }
-
-  .why-me .regular-textbox .regular-text-part {
-    transform: translateX(0px);
-  }
 }
 
 @media only screen and (max-width: 370px) {
