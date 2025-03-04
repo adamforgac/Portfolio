@@ -184,13 +184,17 @@
   border-bottom: 1px solid var(--cta-color);
 }
 
+.cta-two:focus svg path,
 .cta-two:focus {
-  border: 2px solid var(--cta-color);
+  fill: var(--cta-color);
+  color: var(--cta-color);
+  border-bottom: 1px solid var(--cta-color);
 }
 
 .cta-two:active {
-  color: var(--text-light);
-  background-color: var(--bg-dark);
+  fill: var(--cta-color);
+  color: var(--cta-color);
+  border-bottom: 1px solid var(--cta-color);
 }
 
 .full-width-line {

@@ -360,11 +360,23 @@
   /* Form */
 
   .form {
+    padding: 56px 40px;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
 
   .form-text {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    max-width: 600px;
+  }
+
+  .form-icon-box {
     display: none;
+  }
+
+  .main-form {
+    grid-row: 3 / 4;
   }
 
   .word-box {
@@ -929,13 +941,15 @@
   /* Form */
   /* Form */
 
-  .form {
-    padding: 64px 24px;
-  }
-
   .form .form-row {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+  }
+
+  .form {
+    padding: 40px 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
 }
 
