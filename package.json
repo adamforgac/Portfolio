@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/adamforgac/Portfolio#readme",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "axios": "^1.8.3",
+    "browser-sync": "^3.0.3",
+    "lite-server": "^2.6.1",
+    "send": "^1.1.0",
+    "serve-static": "^1.16.2"
   }
 }

@@ -267,35 +267,75 @@ table {
 /* Image slider section */
 /* Image slider section */
 
-.image-slider {
-  overflow: hidden;
-  gap: 16px;
-}
-
-.image-slider > div {
-  height: 200px;
-  width: 100%;
+.explanation > div {
+  min-height: 450px;
+  padding: 24px;
   display: flex;
-  gap: 16px;
-  will-change: transform;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
 }
 
-.strip-one {
-  transform: translateX(0);
-  justify-content: center;
+.explanation > div:first-of-type {
+  grid-column: 1 / 7;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background-color: var(--bg-light);
 }
 
-.strip-two {
-  transform: translateX(0);
-  justify-content: center;
+.explanation > div:last-of-type {
+  grid-column: 7 / 13;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background-color: var(--bg-light);
 }
 
-/* Prevents Safari browser bug */
-.image-slider img,
-.image-slider picture {
-  width: auto;
-  height: 100%;
-  border-radius: var(--radius-lg);
+.explanation img {
+  position: absolute;
+  transform: translate(-50%, -50%); /* Center the image */
+  transition: transform 0.2s ease-out;
+}
+
+.explanation > div:first-of-type img {
+  width: 110%;
+  top: 70%;
+  left: 45%;
+  object-fit: cover;
+}
+
+.explanation > div:last-of-type img {
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  object-fit: cover;
+}
+
+.explanation h2 {
+  color: var(--text-light);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  font-weight: 200;
+  z-index: 100;
+}
+
+.explanation > div > span {
+  padding: 12px 40px;
+  width: min-content;
+  border-radius: var(--radius-xxl);
+  background: rgba(84, 84, 84, 0.24);
+  backdrop-filter: blur(16px);
+  color: var(--text-light);
+  font-size: var(--font-size-base);
+  font-weight: 200;
+   z-index: 100;
 }
 
 /* Work section */
