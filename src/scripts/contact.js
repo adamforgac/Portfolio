@@ -27,31 +27,3 @@ document.querySelectorAll('.question').forEach((question) => {
     }
   });
 });
-
-// Final cta parallax
-
-document.addEventListener('DOMContentLoaded', function () {
-  const icons = document.querySelectorAll('.icon-banner');
-  const section = document.querySelector('.final-cta');
-
-  function updateParallax() {
-    const sectionRect = section.getBoundingClientRect();
-    const sectionTop = sectionRect.top;
-    const sectionHeight = sectionRect.height;
-    const windowHeight = window.innerHeight;
-
-    if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
-      // spočítá progres v té dané sekci
-      const progress = 1 - Math.max(0, sectionTop / windowHeight);
-
-      icons.forEach((icon, index) => {
-        const speed = (index + 1) * 50;
-        const movement = progress * speed; // posunuje šipky vzhledem k ke scrollu a jejich pořadí
-
-        icon.style.transform = `translateY(-${movement}px)`;
-      });
-    }
-  }
-
-  window.addEventListener('scroll', updateParallax);
-});

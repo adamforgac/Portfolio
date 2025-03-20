@@ -32,11 +32,6 @@
   line-height: var(--line-height-base);
 }
 
-.heading-style-5 {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-
 .heading-style-6 {
   font-size: var(--font-size-base);
   line-height: 1.25;
@@ -69,6 +64,7 @@
   display: inline-block;
   transform: translateY(20px);
   filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: opacity 1.8s ease-out, transform 1.8s ease-out,
     filter 1.8s ease-out;
 }
@@ -77,6 +73,7 @@
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
 }
 
 /* ANIMATIONS */
@@ -224,10 +221,47 @@ nav ul {
   gap: 32px;
 }
 
+.glass-tag-light {
+  padding: 12px 40px;
+  width: min-content;
+  border-radius: var(--radius-xxl);
+  background: rgba(256, 256, 256, 0.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-light);
+  font-size: var(--font-size-base);
+  font-weight: 200;
+  z-index: 100;
+}
+
+.glass-tag-dark {
+  padding: 12px 40px;
+  width: min-content;
+  border-radius: var(--radius-xxl);
+  background: rgba(84, 84, 84, 0.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-light);
+  font-size: var(--font-size-base);
+  font-weight: 200;
+  z-index: 100;
+}
+
 /* ANIMATION FRAME SETTINGS */
 
 .lottie-animation {
   overflow: hidden;
   border-radius: 16px;
   background-color: #282828;
+}
+
+.slider-image-wrapper,
+.slider-image-wrapper-v2,
+.slider-image-wrapper-v3 {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-image-wrapper-v3 {
+  width: 100%;
 }
