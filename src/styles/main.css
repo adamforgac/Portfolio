@@ -619,10 +619,9 @@ table {
 
 .advantage-group1 {
   grid-column: 1 / -1;
-  /* display: grid; */
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  display: none !important;
 }
 
 .advantage-group1 h3 {

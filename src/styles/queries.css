@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1270px) {
   .advantage-group1 h3 {
-    max-width: 200px;
+    max-width: 400px;
   }
 }
 
@@ -479,7 +479,7 @@
   }
 
   .width-keeper-3 {
-    max-width: 50%;
+    max-width: 60%;
   }
 }
 
@@ -1035,6 +1035,10 @@
 
   .planet img {
     width: 100%;
+  }
+
+  .width-keeper-3 {
+    max-width: 85%;
   }
 
   /* Footer */
