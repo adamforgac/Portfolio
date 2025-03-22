@@ -27,12 +27,17 @@ document
         alert('Něco se pokazilo. Zkuste to prosím znovu.');
       }
     );
-  });
+});
+
+
+// FORM PROGRESS TRACKER (Zeigarnik effect)
+
 
 
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const loader = document.getElementById('loaderProgress');
+const mobileLoader = document.getElementById('loaderProgressMobile');
 
 let submitted = false;
 
@@ -44,18 +49,20 @@ function updateLoader() {
 
   if (submitted) {
     loader.style.width = '100%';
-  } else if (filled === total) {
-    loader.style.width = '66.6%';
+    mobileLoader.style.width = '100%';
   } else {
-    loader.style.width = '33.3%';
+    // We reserve the last segment (for submit) so we stop at (filled / (total + 1))
+    const progress = (filled / (total + 1)) * 100;
+    loader.style.width = `${progress}%`;
+    mobileLoader.style.width = `${progress}%`;
   }
 }
 
-// Animate to 33.3% on page load
+// Animate to initial progress on load
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    loader.style.width = '33.3%';
-  }, 300); // smooth entrance
+    updateLoader();
+  }, 300);
 });
 
 inputs.forEach((input) => {
@@ -67,5 +74,4 @@ form.addEventListener('submit', (e) => {
   submitted = true;
   updateLoader();
   console.log('Form submitted!');
-  // handle real submission here
 });

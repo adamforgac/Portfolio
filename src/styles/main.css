@@ -976,6 +976,7 @@ footer {
 
 footer svg {
   padding: 0 80px;
+  transform: translateY(1px);
 }
 
 .cloud-space {
@@ -1168,9 +1169,11 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px var(--bg-dark) inset !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
   -webkit-text-fill-color: var(--text-light) !important;
-  transition: background-color 5000s ease-in-out 0s;
+  transition: all 9999s ease-in-out 0s;
+  font-family: inherit !important;
 }
 
 /* Dá pryč label, když používám autocomplete */
@@ -1205,6 +1208,8 @@ input:-webkit-autofill:active {
   grid-column: 1 / -1;
   border-radius: var(--radius-lg);
   background: url(../assets/images/structure.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .form {
@@ -1220,19 +1225,43 @@ input:-webkit-autofill:active {
 
 .loader-container {
   width: 100%;
-  max-width: 500px;
   height: 10px;
   background: #e0e0e0;
-  border-radius: 50px;
+  border-radius: var(--radius-xxl);
   overflow: hidden;
   margin-bottom: 2rem;
 }
+
 .loader-progress {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #1e5dba, #3183fc);
   transition: width 0.5s ease-in-out;
-  border-radius: 100px;
+  border-radius: var(--radius-xxl);
+}
+
+.mobile-loader-wrapper {
+  display: none;
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom) + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 1440px;
+  padding: 16px;
+  border-radius: var(--radius-xxl);
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.loader-container-mobile {
+  /* display: none; */
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: var(--radius-xxl);
+  overflow: hidden;
 }
 
 .form-content {
@@ -1254,7 +1283,6 @@ input:-webkit-autofill:active {
 .form-text * {
   color: var(--text-light);
 }
-
 
 .form-icon-box > div {
   display: flex;
@@ -1358,6 +1386,7 @@ input:-webkit-autofill:active {
 }
 
 .form-text {
+  gap: 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
