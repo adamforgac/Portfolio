@@ -1256,16 +1256,12 @@ input:-webkit-autofill:active {
   -webkit-backdrop-filter: blur(16px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-#loaderProgress {
-  width: 10%;
+  transition: opacity 0.3s ease, transform 0.3s ease, top 0.3s ease;
 }
 
 .mobile-loader-wrapper.visible {
   opacity: 1;
-  transform: translate(-50%, 0); /* slide to normal position */
+  transform: translate(-50%, 0);
   pointer-events: auto;
 }
 
@@ -1276,11 +1272,22 @@ input:-webkit-autofill:active {
 }
 
 .loader-container-mobile {
-  /* display: none; */
   height: 10px;
   background: #e0e0e0;
   border-radius: var(--radius-xxl);
   overflow: hidden;
+}
+
+#loaderProgressMobile {
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(90deg, #1e5dba, #3183fc);
+  transition: width 0.3s ease;
+}
+
+#loaderProgress {
+  width: 10%;
+  transition: width 0.3s ease;
 }
 
 .form-content {
