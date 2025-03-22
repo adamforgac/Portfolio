@@ -33,6 +33,7 @@ document
 // FORM PROGRESS TRACKER (Zeigarnik effect)
 
 
+
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const loader = document.getElementById('loaderProgress');
@@ -40,7 +41,17 @@ const mobileLoader = document.getElementById('loaderProgressMobile');
 const mobileLoaderWrapper = document.querySelector('.mobile-loader-wrapper');
 
 let submitted = false;
-let isManuallyVisible = false;
+let initialInnerHeight = window.innerHeight;
+
+// Show loader on scroll
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  if (scrollTop > 80) {
+    mobileLoaderWrapper.classList.add('visible');
+  } else {
+    mobileLoaderWrapper.classList.remove('visible');
+  }
+});
 
 function updateLoader() {
   const filled = Array.from(inputs).filter(
@@ -53,9 +64,8 @@ function updateLoader() {
     mobileLoader.style.width = '100%';
   } else {
     const progress = (filled / (total + 1)) * 90 + 10;
-    const clamped = Math.max(progress, 10);
-    loader.style.width = `${clamped}%`;
-    mobileLoader.style.width = `${clamped}%`;
+    loader.style.width = `${progress}%`;
+    mobileLoader.style.width = `${progress}%`;
   }
 }
 
@@ -66,44 +76,28 @@ window.addEventListener('DOMContentLoaded', () => {
   }, 300);
 });
 
+// Track input changes
 inputs.forEach((input) => {
-  input.addEventListener('input', () => {
-    updateLoader();
-
-    // Keep loader visible when interacting
-    if (!mobileLoaderWrapper.classList.contains('visible')) {
-      mobileLoaderWrapper.classList.add('visible');
-      isManuallyVisible = true;
-    }
-  });
+  input.addEventListener('input', updateLoader);
 });
 
+// Handle submit
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   submitted = true;
   updateLoader();
 });
 
-// Scroll visibility (only toggle if user hasn't triggered visibility)
-window.addEventListener('scroll', () => {
-  if (isManuallyVisible) return;
+// Detect keyboard and reposition loader
+window.addEventListener('resize', () => {
+  const isKeyboardOpen = window.innerHeight < initialInnerHeight - 150;
 
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  if (scrollTop > 80) {
-    mobileLoaderWrapper.classList.add('visible');
-  } else {
-    mobileLoaderWrapper.classList.remove('visible');
-  }
-});
-
-// Fix for mobile keyboard pushing loader offscreen
-window.visualViewport?.addEventListener('resize', () => {
-  const isKeyboardOpen = window.innerHeight < screen.height - 100;
   if (isKeyboardOpen) {
     mobileLoaderWrapper.style.position = 'absolute';
     mobileLoaderWrapper.style.top = `${window.scrollY + 16}px`;
   } else {
     mobileLoaderWrapper.style.position = 'fixed';
     mobileLoaderWrapper.style.top = '16px';
+    initialInnerHeight = window.innerHeight; // Update in case of orientation change
   }
 });
