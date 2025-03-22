@@ -87,6 +87,21 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
 /* CTAs */
 
 .cta-one {
@@ -208,6 +223,60 @@ header {
   margin-top: 32px;
 }
 
+.time-availability {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--radius-xxl);
+  background-color: var(--bg-light);
+  padding: 14px 16px 14px 12px;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.availability-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.availability-text span {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.red-dot-border {
+  position: relative;
+  height: 12px;
+  width: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-dot-border::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+}
+
+.red-dot {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
 nav {
   display: flex;
   width: 100%;
@@ -226,8 +295,8 @@ nav ul {
   width: min-content;
   border-radius: var(--radius-xxl);
   background: rgba(256, 256, 256, 0.24);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--text-light);
   font-size: var(--font-size-base);
   font-weight: 200;
@@ -238,9 +307,9 @@ nav ul {
   padding: 12px 40px;
   width: min-content;
   border-radius: var(--radius-xxl);
-  background: rgba(84, 84, 84, 0.24);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--text-light);
   font-size: var(--font-size-base);
   font-weight: 200;

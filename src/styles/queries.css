@@ -386,28 +386,24 @@
   /* Form */
 
   .form {
-    padding: 56px 40px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-content > div p {
+    display: block;
+    color: var(--text-light);
   }
 
   .form-text {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    max-width: 600px;
-  }
-
-  .form-icon-box {
     display: none;
-  }
-
-  .main-form {
-    grid-row: 3 / 4;
-  }
-
-  .word-box {
-    padding: 0 40px;
-    height: 64px;
   }
 }
 
@@ -562,6 +558,20 @@
 
   .heading-textbox {
     gap: 32px;
+  }
+
+  /* header */
+  /* header */
+  /* header */
+
+  .cta-two {
+    padding: 8px 16px;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .cta-two svg {
+    height: 16px;
   }
 
   /* Hero section */
@@ -974,15 +984,8 @@
   /* Form */
   /* Form */
 
-  .form .form-row {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .form {
-    padding: 40px 24px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+  .form-content {
+    padding: 48px 32px;
   }
 }
 
@@ -1073,6 +1076,16 @@
 }
 
 @media only screen and (max-width: 530px) {
+  /* Form page */
+  /* Form page */
+  /* Form page */
+  /* Form page */
+  /* Form page */
+  .form-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
