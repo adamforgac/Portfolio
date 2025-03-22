@@ -42,7 +42,6 @@ const mobileLoaderWrapper = document.querySelector('.mobile-loader-wrapper');
 
 let submitted = false;
 
-// Show loader when scrolling down a bit
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop > 80) {
@@ -62,12 +61,14 @@ function updateLoader() {
     loader.style.width = '100%';
     mobileLoader.style.width = '100%';
   } else {
-    const progress = (filled / (total + 1)) * 100;
-    loader.style.width = `${progress}%`;
-    mobileLoader.style.width = `${progress}%`;
+    const progress = (filled / (total + 1)) * 90 + 10;
+    const clampedProgress = Math.max(progress, 10);
+    loader.style.width = `${clampedProgress}%`;
+    mobileLoader.style.width = `${clampedProgress}%`;
   }
 }
 
+// Initialize loader after page load
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     loader.style.width = '10%';
@@ -75,12 +76,25 @@ window.addEventListener('DOMContentLoaded', () => {
   }, 300);
 });
 
+// Track input changes
 inputs.forEach((input) => {
   input.addEventListener('input', updateLoader);
 });
 
+// On submit, complete loader
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   submitted = true;
   updateLoader();
 });
+
+// Reposition mobile loader when keyboard opens
+if (window.visualViewport) {
+  const repositionMobileLoader = () => {
+    const offsetTop = window.visualViewport.offsetTop || 0;
+    mobileLoaderWrapper.style.top = `${offsetTop + 16}px`;
+  };
+
+  window.visualViewport.addEventListener('resize', repositionMobileLoader);
+  window.visualViewport.addEventListener('scroll', repositionMobileLoader);
+}

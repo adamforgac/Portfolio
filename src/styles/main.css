@@ -1233,7 +1233,7 @@ input:-webkit-autofill:active {
 
 .loader-progress {
   height: 100%;
-  width: 0%;
+  width: 10%;
   background: linear-gradient(90deg, #1e5dba, #3183fc);
   transition: width 0.5s ease-in-out;
   border-radius: var(--radius-xxl);
