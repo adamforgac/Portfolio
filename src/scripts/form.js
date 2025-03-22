@@ -32,8 +32,6 @@ document
 
 // FORM PROGRESS TRACKER (Zeigarnik effect)
 
-
-
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const loader = document.getElementById('loaderProgress');
@@ -41,7 +39,9 @@ const mobileLoader = document.getElementById('loaderProgressMobile');
 const mobileLoaderWrapper = document.querySelector('.mobile-loader-wrapper');
 
 let submitted = false;
+let initialViewportHeight = window.innerHeight;
 
+// Show/hide loader on scroll
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (scrollTop > 80) {
@@ -49,6 +49,20 @@ window.addEventListener('scroll', () => {
   } else {
     mobileLoaderWrapper.classList.remove('visible');
   }
+});
+
+// Show loader when focusing an input (fix for keyboard overlay issue)
+inputs.forEach((input) => {
+  input.addEventListener('focus', () => {
+    mobileLoaderWrapper.classList.add('visible');
+  });
+
+  input.addEventListener('blur', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop < 80) {
+      mobileLoaderWrapper.classList.remove('visible');
+    }
+  });
 });
 
 function updateLoader() {
@@ -68,7 +82,7 @@ function updateLoader() {
   }
 }
 
-// Initialize loader after page load
+// Animate to 10% on page load
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     loader.style.width = '10%';
@@ -81,20 +95,9 @@ inputs.forEach((input) => {
   input.addEventListener('input', updateLoader);
 });
 
-// On submit, complete loader
+// Submit form
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   submitted = true;
   updateLoader();
 });
-
-// Reposition mobile loader when keyboard opens
-if (window.visualViewport) {
-  const repositionMobileLoader = () => {
-    const offsetTop = window.visualViewport.offsetTop || 0;
-    mobileLoaderWrapper.style.top = `${offsetTop + 16}px`;
-  };
-
-  window.visualViewport.addEventListener('resize', repositionMobileLoader);
-  window.visualViewport.addEventListener('scroll', repositionMobileLoader);
-}
