@@ -1242,10 +1242,9 @@ input:-webkit-autofill:active {
 .mobile-loader-wrapper {
   display: none;
   position: fixed;
-  top: auto;
   bottom: 16px;
   left: 50%;
-  transform: translate(-50%, -10px); /* start slightly above */
+  transform: translate(-50%, -10px);
   width: calc(100% - 80px);
   max-width: 1440px;
   padding: 16px;
@@ -1256,7 +1255,15 @@ input:-webkit-autofill:active {
   -webkit-backdrop-filter: blur(16px);
   opacity: 0;
   pointer-events: none;
-  transition: top 0.2s ease-out, opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Class to show when keyboard is active */
+.mobile-loader-wrapper.keyboard-active {
+  bottom: calc(40% + 16px); /* Position above the keyboard */
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
 }
 
 #loaderProgress {

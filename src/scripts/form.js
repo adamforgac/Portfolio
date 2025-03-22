@@ -32,35 +32,50 @@ document
 
 // FORM PROGRESS TRACKER (Zeigarnik effect)
 
+
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const loader = document.getElementById('loaderProgress');
 const mobileLoader = document.getElementById('loaderProgressMobile');
 const mobileLoaderWrapper = document.querySelector('.mobile-loader-wrapper');
-
 let submitted = false;
-let initialViewportHeight = window.innerHeight;
+let isKeyboardVisible = false;
 
-// Show/hide loader on scroll
+// Show loader when scrolling down a bit
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  if (scrollTop > 80) {
-    mobileLoaderWrapper.classList.add('visible');
-  } else {
-    mobileLoaderWrapper.classList.remove('visible');
+  
+  // Only apply scroll-based visibility when keyboard is not active
+  if (!isKeyboardVisible) {
+    if (scrollTop > 80) {
+      mobileLoaderWrapper.classList.add('visible');
+    } else {
+      mobileLoaderWrapper.classList.remove('visible');
+    }
   }
 });
 
-// Show loader when focusing an input (fix for keyboard overlay issue)
-inputs.forEach((input) => {
+// Detect keyboard visibility through input focus/blur
+inputs.forEach(input => {
   input.addEventListener('focus', () => {
-    mobileLoaderWrapper.classList.add('visible');
-  });
-
-  input.addEventListener('blur', () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop < 80) {
+    // Only on mobile devices
+    if (window.innerWidth <= 768) {
+      isKeyboardVisible = true;
       mobileLoaderWrapper.classList.remove('visible');
+      mobileLoaderWrapper.classList.add('keyboard-active');
+    }
+  });
+  
+  input.addEventListener('blur', () => {
+    if (window.innerWidth <= 768) {
+      isKeyboardVisible = false;
+      mobileLoaderWrapper.classList.remove('keyboard-active');
+      
+      // Re-check scroll position to decide if normal visible class should be applied
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > 80) {
+        mobileLoaderWrapper.classList.add('visible');
+      }
     }
   });
 });
@@ -70,32 +85,43 @@ function updateLoader() {
     (input) => input.value.trim() !== ''
   ).length;
   const total = inputs.length;
-
+  
   if (submitted) {
     loader.style.width = '100%';
     mobileLoader.style.width = '100%';
   } else {
-    const progress = (filled / (total + 1)) * 90 + 10;
-    const clampedProgress = Math.max(progress, 10);
-    loader.style.width = `${clampedProgress}%`;
-    mobileLoader.style.width = `${clampedProgress}%`;
+    const progress = (filled / (total + 1)) * 100;
+    loader.style.width = `${progress}%`;
+    mobileLoader.style.width = `${progress}%`;
   }
 }
 
-// Animate to 10% on page load
+// Show initial loader state
 window.addEventListener('DOMContentLoaded', () => {
+  // Make sure mobile loader is properly displayed on mobile
+  if (window.innerWidth <= 768) {
+    mobileLoaderWrapper.style.display = 'block';
+  }
+  
   setTimeout(() => {
     loader.style.width = '10%';
     mobileLoader.style.width = '10%';
   }, 300);
 });
 
-// Track input changes
+// Add resize listener to handle orientation changes
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    mobileLoaderWrapper.style.display = 'block';
+  } else {
+    mobileLoaderWrapper.style.display = 'none';
+  }
+});
+
 inputs.forEach((input) => {
   input.addEventListener('input', updateLoader);
 });
 
-// Submit form
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   submitted = true;
