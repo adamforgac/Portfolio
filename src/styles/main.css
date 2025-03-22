@@ -1239,55 +1239,18 @@ input:-webkit-autofill:active {
   border-radius: var(--radius-xxl);
 }
 
-.mobile-loader-wrapper {
-  display: none;
-  position: fixed;
-  bottom: 16px;
-  left: 50%;
-  transform: translate(-50%, -10px);
-  width: calc(100% - 80px);
-  max-width: 1440px;
-  padding: 16px;
-  border-radius: var(--radius-xxl);
-  z-index: 200;
-  background: rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.mobile-loader-wrapper.visible {
-  opacity: 1;
-  transform: translate(-50%, 0);
-  pointer-events: auto;
-}
-
-.mobile-loader-wrapper.keyboard-active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, 0);
-  transition: bottom 0.2s ease, opacity 0.3s ease;
-  /* We'll set bottom dynamically in JS */
-}
-
 #loaderProgress {
   width: 10%;
 }
 
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
-  .mobile-loader-wrapper {
-    padding-bottom: calc(16px + env(safe-area-inset-bottom));
-  }
-}
-
 .loader-container-mobile {
-  /* display: none; */
+  display: none;
   height: 10px;
   background: #e0e0e0;
   border-radius: var(--radius-xxl);
   overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-xxl);
 }
 
 .form-content {

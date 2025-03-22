@@ -416,7 +416,7 @@
     display: none;
   }
 
-  .mobile-loader-wrapper {
+  .loader-container-mobile {
     display: block;
   }
 }
