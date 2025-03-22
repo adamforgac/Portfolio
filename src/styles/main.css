@@ -1242,7 +1242,8 @@ input:-webkit-autofill:active {
 .mobile-loader-wrapper {
   display: none;
   position: fixed;
-  top: 16px;
+  top: auto;
+  bottom: 16px;
   left: 50%;
   transform: translate(-50%, -10px); /* start slightly above */
   width: calc(100% - 80px);
