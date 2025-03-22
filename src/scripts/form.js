@@ -33,20 +33,62 @@ document
 // FORM PROGRESS TRACKER (Zeigarnik effect)
 
 
+// Replace your JavaScript with this improved version:
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input, textarea');
 const loader = document.getElementById('loaderProgress');
 const mobileLoader = document.getElementById('loaderProgressMobile');
 const mobileLoaderWrapper = document.querySelector('.mobile-loader-wrapper');
 let submitted = false;
+let activeInput = null;
 let isKeyboardVisible = false;
+let visualViewportHeight = window.innerHeight;
 
-// Show loader when scrolling down a bit
+// Initialize mobile loader display
+if (window.innerWidth <= 768) {
+  mobileLoaderWrapper.style.display = 'block';
+}
+
+// Visual Viewport API to detect keyboard height
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', () => {
+    // The keyboard is likely shown when visual viewport height is significantly less than window inner height
+    const newViewportHeight = window.visualViewport.height;
+    const heightDifference = window.innerHeight - newViewportHeight;
+    
+    if (heightDifference > 150 && activeInput) {
+      // Keyboard is visible - position the tracker just above the keyboard
+      isKeyboardVisible = true;
+      mobileLoaderWrapper.classList.remove('visible');
+      mobileLoaderWrapper.classList.add('keyboard-active');
+      
+      // Position just above the keyboard
+      const keyboardHeight = heightDifference;
+      mobileLoaderWrapper.style.bottom = `${keyboardHeight + 8}px`; // 8px gap above keyboard
+      
+      // Make sure the active input is visible
+      ensureInputVisible(activeInput);
+    } else {
+      // Keyboard is hidden
+      isKeyboardVisible = false;
+      mobileLoaderWrapper.classList.remove('keyboard-active');
+      mobileLoaderWrapper.style.bottom = '16px'; // Reset to default position
+      
+      // Check scroll position to decide if normal visible class should be applied
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > 80) {
+        mobileLoaderWrapper.classList.add('visible');
+      }
+    }
+    
+    visualViewportHeight = newViewportHeight;
+  });
+}
+
+// Show loader when scrolling down a bit (only when keyboard is not visible)
 window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  
-  // Only apply scroll-based visibility when keyboard is not active
   if (!isKeyboardVisible) {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (scrollTop > 80) {
       mobileLoaderWrapper.classList.add('visible');
     } else {
@@ -55,30 +97,64 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Detect keyboard visibility through input focus/blur
+// Track active input
 inputs.forEach(input => {
   input.addEventListener('focus', () => {
-    // Only on mobile devices
+    activeInput = input;
+    
+    // Only apply keyboard behavior on mobile
     if (window.innerWidth <= 768) {
-      isKeyboardVisible = true;
-      mobileLoaderWrapper.classList.remove('visible');
-      mobileLoaderWrapper.classList.add('keyboard-active');
+      // Check if keyboard is likely visible (using visualViewport height difference)
+      if (window.visualViewport && (window.innerHeight - window.visualViewport.height > 150)) {
+        isKeyboardVisible = true;
+        mobileLoaderWrapper.classList.remove('visible');
+        mobileLoaderWrapper.classList.add('keyboard-active');
+        
+        // Position just above the keyboard
+        const keyboardHeight = window.innerHeight - window.visualViewport.height;
+        mobileLoaderWrapper.style.bottom = `${keyboardHeight + 8}px`; // 8px gap
+        
+        // Make sure the input is visible
+        ensureInputVisible(input);
+      }
     }
   });
   
   input.addEventListener('blur', () => {
-    if (window.innerWidth <= 768) {
-      isKeyboardVisible = false;
-      mobileLoaderWrapper.classList.remove('keyboard-active');
-      
-      // Re-check scroll position to decide if normal visible class should be applied
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      if (scrollTop > 80) {
-        mobileLoaderWrapper.classList.add('visible');
+    activeInput = null;
+    
+    // Don't immediately remove keyboard-active - the visualViewport handler will do that
+    // when the keyboard actually closes
+    
+    // Small delay to allow visualViewport to update first
+    setTimeout(() => {
+      if (!activeInput) {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop > 80) {
+          mobileLoaderWrapper.classList.add('visible');
+        }
       }
-    }
+    }, 100);
   });
 });
+
+// Helper function to ensure the input is visible when keyboard is shown
+function ensureInputVisible(input) {
+  if (!input) return;
+  
+  // Get input position relative to viewport
+  const rect = input.getBoundingClientRect();
+  const inputBottom = rect.bottom;
+  
+  // Calculate visible area (accounting for keyboard)
+  const visibleAreaHeight = visualViewportHeight - mobileLoaderWrapper.offsetHeight - 16;
+  
+  // If input is below the visible area, scroll to make it visible
+  if (inputBottom > visibleAreaHeight) {
+    const scrollNeeded = inputBottom - visibleAreaHeight + 16; // 16px buffer
+    window.scrollBy(0, scrollNeeded);
+  }
+}
 
 function updateLoader() {
   const filled = Array.from(inputs).filter(
@@ -109,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }, 300);
 });
 
-// Add resize listener to handle orientation changes
+// Handle orientation changes and resizing
 window.addEventListener('resize', () => {
   if (window.innerWidth <= 768) {
     mobileLoaderWrapper.style.display = 'block';

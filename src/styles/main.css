@@ -1255,25 +1255,25 @@ input:-webkit-autofill:active {
   -webkit-backdrop-filter: blur(16px);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Class to show when keyboard is active */
-.mobile-loader-wrapper.keyboard-active {
-  bottom: calc(40% + 16px); /* Position above the keyboard */
+.mobile-loader-wrapper.visible {
   opacity: 1;
   transform: translate(-50%, 0);
   pointer-events: auto;
 }
 
-#loaderProgress {
-  width: 10%;
+.mobile-loader-wrapper.keyboard-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition: bottom 0.2s ease, opacity 0.3s ease;
+  /* We'll set bottom dynamically in JS */
 }
 
-.mobile-loader-wrapper.visible {
-  opacity: 1;
-  transform: translate(-50%, 0); /* slide to normal position */
-  pointer-events: auto;
+#loaderProgress {
+  width: 10%;
 }
 
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
