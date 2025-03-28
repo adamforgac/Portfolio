@@ -13,7 +13,7 @@
     grid-column: 1 / 8;
   }
 
-  .hero-section > img {
+  .hero-section > picture {
     grid-column: 8 / 13;
   }
 
@@ -80,8 +80,8 @@
     --font-size-xl: 3.158rem;
     --line-height-xl: 3.5rem;
 
-    --font-size-lg: 1.777rem;
-    --line-height-lg: 2rem;
+    --font-size-lg: 1.977rem;
+    --line-height-lg: 2.4rem;
 
     --font-size-md: 1.333rem;
     --line-height-md: 1.75rem;
@@ -164,7 +164,7 @@
     grid-column: 1 / 5;
   }
 
-  .hero-section > img {
+  .hero-section > picture {
     grid-column: 5 / 9;
   }
 
@@ -502,7 +502,7 @@
     grid-column: 1 / 6;
   }
 
-  .hero-section > img {
+  .hero-section > picture {
     grid-column: 6 / 9;
   }
 
@@ -521,8 +521,8 @@
     --font-size-xl: 2.369rem;
     --line-height-xl: 2.75rem;
 
-    --font-size-lg: 1.777rem;
-    --line-height-lg: 2rem;
+    --font-size-lg: 1.9rem;
+    --line-height-lg: 2.3rem;
 
     --font-size-md: 1.333rem;
     --line-height-md: 1.75rem;
@@ -602,7 +602,7 @@
     grid-column: 1 / -1;
   }
 
-  .hero-section > img {
+  .hero-section > picture {
     grid-column: 1 / -1;
   }
 
@@ -1265,7 +1265,7 @@
     padding: 24px 16px;
   }
 
-  .review-card img {
+  .review-header > div:first-of-type {
     width: 64px;
     height: 88px;
   }

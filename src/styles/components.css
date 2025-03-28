@@ -69,6 +69,10 @@
     filter 1.8s ease-out;
 }
 
+.full {
+  width: 100%;
+}
+
 .decorative-animation.visible {
   opacity: 1;
   transform: translateY(0);
