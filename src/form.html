@@ -8,12 +8,7 @@
       name="description"
       content="Take the first step toward your next big project. Fill out the form and let’s turn your idea into reality—no commitment, just a conversation."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="image" href="assets/images/structure.webp" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <link rel="stylesheet" href="styles/layout.css" />
@@ -176,10 +171,13 @@
                 <br />
                 <br />
 
-                At this time, I’m focused on ongoing projects and not onboarding
-                new clients — but that doesn’t mean your idea goes unheard.
-                Submit your request and get in the queue — when the right time
-                comes, you’ll be the first to know.
+                At this time,
+                <strong
+                  >I’m focused on ongoing projects and not onboarding new
+                  clients</strong
+                >, but that doesn’t mean your idea goes unheard. Submit your
+                request and get in the queue — when the right time comes, you’ll
+                be the first to know.
               </p>
 
               <div class="loader-container">
@@ -234,7 +232,7 @@
     <script>
       emailjs.init('PtihRq6ljH0VL9-aQ');
     </script>
-    <script src="scripts/animations.js"></script>
-    <script src="scripts/form.js"></script>
+    <script src="scripts/animations.js" defer></script>
+    <script src="scripts/form.js" defer></script>
   </body>
 </html>

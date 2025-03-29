@@ -9,23 +9,51 @@
       content="Web developer and designer based in Zlín, Czech Republic. I create modern, responsive websites with creative design solutions. Explore my portfolio and let's bring your vision to life."
     />
 
+    <!-- Classic favicon -->
+    <link
+      rel="icon"
+      href="assets/images/favicons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Modern SVG favicon -->
+    <link
+      rel="icon"
+      href="assets/images/favicons/favicon.svg"
+      type="image/svg+xml"
+    />
+
+    <!-- PNG favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/images/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/images/favicons/web-app-manifest-icon-192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/images/favicons/web-app-manifest-icon-512.png"
+    />
+
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/favicons/apple-touch-icon.png"
+    />
+
     <link rel="preload" href="styles/main.css" as="style" />
     <link rel="preload" href="styles/components.css" as="style" />
     <link rel="preload" href="styles/layout.css" as="style" />
     <link rel="preload" href="styles/queries.css" as="style" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <link rel="stylesheet" href="styles/layout.css" />
@@ -103,13 +131,42 @@
         </div>
 
         <picture>
+          <!-- MOBILE: up to 768px -->
           <source
-            srcset="assets/images/me/mobile-version-web.webp"
-            media="(max-width: 500px)"
+            srcset="
+              assets/images/me/opt/mobile/1000x1125.webp 1000w,
+              assets/images/me/opt/mobile/1500x1688.webp 1500w,
+              assets/images/me/opt/mobile/2000x2251.webp 2000w,
+              assets/images/me/opt/mobile/2500x2814.webp 2500w,
+              assets/images/me/opt/mobile/3000x3377.webp 3000w
+            "
+            media="(max-width: 768px)"
+            sizes="100vw"
+            type="image/webp"
           />
+
+          <!-- DESKTOP: 769px and up -->
+          <source
+            srcset="
+              assets/images/me/opt/desktop/1500x1000.webp 1500w,
+              assets/images/me/opt/desktop/2000x1333.webp 2000w,
+              assets/images/me/opt/desktop/2500x1667.webp 2500w,
+              assets/images/me/opt/desktop/3000x2000.webp 3000w,
+              assets/images/me/opt/desktop/3500x2333.webp 3500w,
+              assets/images/me/opt/desktop/4000x2666.webp 4000w
+            "
+            media="(min-width: 769px)"
+            sizes="50vw"
+            type="image/webp"
+          />
+
+          <!-- Fallback <img> if none of the above match -->
           <img
-            src="assets/images/me/desktop-1.webp"
+            src="assets/images/me/opt/desktop/2000x1333.webp"
             alt="Adam Forgáč in black t-shirt"
+            width="2000"
+            height="1333"
+            fetchpriority="high"
           />
         </picture>
       </section>
@@ -117,8 +174,9 @@
       <section class="regular-container regular-grid outer-section explanation">
         <div class="design-explanation slider-image-wrapper-v2">
           <img
-            src="assets/images/explanation/design.webp"
+            src="assets/images/explanation/desktop-design.webp"
             alt="The process of designing a website on MacBook"
+            loading="lazy"
           />
           <span class="glass-tag-dark">Design</span>
 
@@ -130,8 +188,9 @@
 
         <div class="development-explanation slider-image-wrapper-v2">
           <img
-            src="assets/images/explanation/code.webp"
+            src="assets/images/explanation/desktop-code.webp"
             alt="The process of developing a website on MacBook"
+            loading="lazy"
           />
 
           <span class="glass-tag-dark">Development</span>
@@ -751,6 +810,7 @@
             <img
               src="assets/images/advantages/conversion-path.webp"
               alt="Phone with blue order button in hand"
+              loading="lazy"
             />
 
             <span class="glass-tag-light">Clear&nbsp;path</span>
@@ -814,6 +874,7 @@
               id="earth"
               src="assets/images/advantages/planet-earth.webp"
               alt="Planet Earth"
+              loading="lazy"
             />
           </div>
 
@@ -822,6 +883,7 @@
               <img
                 src="assets/images/advantages/coding.webp"
                 alt="Lines of code"
+                loading="lazy"
               />
               <div>
                 <h4 class="heading-style-3">Solid<br />codebase</h4>
@@ -836,6 +898,7 @@
               <img
                 src="assets/images/advantages/designing.webp"
                 alt="Palette of colors"
+                loading="lazy"
               />
               <div>
                 <h4 class="heading-style-3">Timeless<br />design</h4>

@@ -163,6 +163,34 @@ table {
   src: url('../assets/fonts/PPEditorialOld-UltralightItalic.woff2')
       format('woff2'),
     url('../assets/fonts/PPEditorialOld-UltralightItalic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraLight.woff2') format('woff2'),
+    url('../assets/fonts/Poppins-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Light.woff2') format('woff2'),
+    url('../assets/fonts/Poppins-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Poppins-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Variables */
@@ -502,7 +530,7 @@ table {
 
 .word-slider {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   white-space: nowrap;
   position: relative;
   display: flex;
@@ -568,6 +596,7 @@ table {
   min-width: 160px;
 }
 
+.slider-wrapper h2,
 .slider-wrapper h3 {
   font-size: var(--font-size-xl);
 }
